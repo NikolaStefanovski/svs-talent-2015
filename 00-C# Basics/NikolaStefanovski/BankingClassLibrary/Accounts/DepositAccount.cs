@@ -7,7 +7,7 @@ using BankingClassLibrary.Common;
 
 namespace BankingClassLibrary.Accounts
 {
-    public class DepositAccount : Account
+    public class DepositAccount : Account, BankingClassLibrary.Accounts.IDepositAccount
     {
         #region Fields and properties
           
@@ -17,11 +17,17 @@ namespace BankingClassLibrary.Accounts
         private DateTime _endDate;
         private TransactionAccount _transactionAccount;
 
+        /// <summary>
+        /// Unit of measurement of the deposit (days, months, years) and how many of them
+        /// </summary>
         public TimePeriod Period { get { return _period; } private set { _period = value; } }
+        /// <summary>
+        /// The interest rate and number of installments
+        /// </summary>
         public InterestRate Interest { get { return _interest; } private set { _interest = value; } }
         public DateTime StartDate { get { return _startDate; } private set { _startDate = value; } }
         public DateTime EndDate { get { return _endDate; } private set { _endDate = value; } }
-        public TransactionAccount TransactionAccount { get { return _transactionAccount; } private set { _transactionAccount = value; } }
+        public ITransactionAccount TransactionAccount { get { return _transactionAccount; } private set { _transactionAccount = value; } }
         #endregion
 
         /// <summary>

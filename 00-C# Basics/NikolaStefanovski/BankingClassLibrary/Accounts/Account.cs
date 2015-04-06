@@ -10,7 +10,7 @@ namespace BankingClassLibrary.Accounts
     /// <summary>
     /// Base type for defining a bank account, contains an account id, a transactaion account number, the currency type and the total balance.
     /// </summary>
-    abstract public class Account
+    abstract public class Account : IAccount
     {
         #region Fields and properties
         private long _id;
@@ -64,13 +64,22 @@ namespace BankingClassLibrary.Accounts
         #endregion
 
         #region Public methods
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
         public TransactionStatus DebitAmount(CurrencyAmount amount)
         {
             if (!IsCurrencyAmountOK(amount)) return TransactionStatus.Failed;
             _balance.Amount -= amount.Amount;
             return TransactionStatus.Completed;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
         public TransactionStatus CreditAmount(CurrencyAmount amount)
         {
             if (!IsCurrencyAmountOK(amount)) return TransactionStatus.Failed;

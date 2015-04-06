@@ -10,7 +10,7 @@ namespace BankingClassLibrary.Accounts
     /// <summary>
     /// A standard transacton account with an imposed limit.
     /// </summary>
-    public class TransactionAccount : Account
+    public class TransactionAccount : Account, ITransactionAccount
     {
         /// <summary>
         /// Field for the limit.
