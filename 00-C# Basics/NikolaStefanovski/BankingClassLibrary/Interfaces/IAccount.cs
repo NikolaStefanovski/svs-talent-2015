@@ -1,7 +1,7 @@
 ﻿using System;
 namespace BankingClassLibrary.Accounts
 {
-    interface IAccount
+    public interface IAccount
     {
         BankingClassLibrary.Common.CurrencyAmount Balance { get; }
         BankingClassLibrary.Common.TransactionStatus CreditAmount(BankingClassLibrary.Common.CurrencyAmount amount);

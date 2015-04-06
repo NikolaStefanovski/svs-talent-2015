@@ -15,7 +15,7 @@ namespace BankingClassLibrary.Accounts
         private InterestRate _interest;
         private DateTime _startDate;
         private DateTime _endDate;
-        private TransactionAccount _transactionAccount;
+        private ITransactionAccount _transactionAccount;
 
         /// <summary>
         /// Unit of measurement of the deposit (days, months, years) and how many of them

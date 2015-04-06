@@ -1,7 +1,7 @@
 ﻿using System;
 namespace BankingClassLibrary.Accounts
 {
-    interface IDepositAccount : IAccount
+    public interface IDepositAccount : IAccount
     {
         DateTime EndDate { get; }
         BankingClassLibrary.Common.InterestRate Interest { get; }

@@ -41,6 +41,9 @@
   <ItemGroup>
     <Compile Include="Accounts\Account.cs" />
     <Compile Include="Accounts\DepositAccount.cs" />
+    <Compile Include="Interfaces\IDepositAccount.cs" />
+    <Compile Include="Interfaces\ITransactionAccount.cs" />
+    <Compile Include="Interfaces\IAccount.cs" />
     <Compile Include="Common\CurrencyAmount.cs" />
     <Compile Include="Common\InterestRate.cs" />
     <Compile Include="Common\TimePeriod.cs" />
