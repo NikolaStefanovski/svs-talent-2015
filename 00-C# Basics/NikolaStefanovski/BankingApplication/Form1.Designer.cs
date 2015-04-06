@@ -77,13 +77,42 @@
             this.lblInterestUnit = new System.Windows.Forms.Label();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblEndDate = new System.Windows.Forms.Label();
+            this.lblEndDateTo = new System.Windows.Forms.Label();
+            this.lblStartDateTo = new System.Windows.Forms.Label();
+            this.lblInterestUnitTo = new System.Windows.Forms.Label();
+            this.lblPercentTo = new System.Windows.Forms.Label();
+            this.lblPeriodUnitTo = new System.Windows.Forms.Label();
+            this.lblPeriodTo = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.lblLimitTo = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.lblBalanceTo = new System.Windows.Forms.Label();
+            this.lblCurrencyTo = new System.Windows.Forms.Label();
+            this.lblNumberTo = new System.Windows.Forms.Label();
+            this.lblIdTo = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.btnMakeTransaction = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreateTransactionAccount
             // 
             this.btnCreateTransactionAccount.Location = new System.Drawing.Point(12, 379);
             this.btnCreateTransactionAccount.Name = "btnCreateTransactionAccount";
-            this.btnCreateTransactionAccount.Size = new System.Drawing.Size(191, 23);
+            this.btnCreateTransactionAccount.Size = new System.Drawing.Size(153, 23);
             this.btnCreateTransactionAccount.TabIndex = 0;
             this.btnCreateTransactionAccount.Text = "Create Transaction Account";
             this.btnCreateTransactionAccount.UseVisualStyleBackColor = true;
@@ -93,7 +122,7 @@
             // 
             this.btnCreateDepositAccount.Location = new System.Drawing.Point(12, 408);
             this.btnCreateDepositAccount.Name = "btnCreateDepositAccount";
-            this.btnCreateDepositAccount.Size = new System.Drawing.Size(191, 23);
+            this.btnCreateDepositAccount.Size = new System.Drawing.Size(153, 23);
             this.btnCreateDepositAccount.TabIndex = 1;
             this.btnCreateDepositAccount.Text = "Create Deposit Account.";
             this.btnCreateDepositAccount.UseVisualStyleBackColor = true;
@@ -274,9 +303,9 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(362, 14);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(107, 13);
+            this.label14.Size = new System.Drawing.Size(102, 13);
             this.label14.TabIndex = 24;
-            this.label14.Text = "The created account";
+            this.label14.Text = "The FROM account";
             // 
             // label13
             // 
@@ -319,36 +348,32 @@
             this.lblId.AutoSize = true;
             this.lblId.Location = new System.Drawing.Point(464, 65);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(26, 13);
+            this.lblId.Size = new System.Drawing.Size(0, 13);
             this.lblId.TabIndex = 29;
-            this.lblId.Text = "lblId";
             // 
             // lblNumber
             // 
             this.lblNumber.AutoSize = true;
             this.lblNumber.Location = new System.Drawing.Point(464, 82);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(54, 13);
+            this.lblNumber.Size = new System.Drawing.Size(0, 13);
             this.lblNumber.TabIndex = 30;
-            this.lblNumber.Text = "lblNumber";
             // 
             // lblCurrency
             // 
             this.lblCurrency.AutoSize = true;
             this.lblCurrency.Location = new System.Drawing.Point(464, 99);
             this.lblCurrency.Name = "lblCurrency";
-            this.lblCurrency.Size = new System.Drawing.Size(59, 13);
+            this.lblCurrency.Size = new System.Drawing.Size(0, 13);
             this.lblCurrency.TabIndex = 31;
-            this.lblCurrency.Text = "lblCurrency";
             // 
             // lblBalance
             // 
             this.lblBalance.AutoSize = true;
             this.lblBalance.Location = new System.Drawing.Point(464, 127);
             this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(56, 13);
+            this.lblBalance.Size = new System.Drawing.Size(0, 13);
             this.lblBalance.TabIndex = 32;
-            this.lblBalance.Text = "lblBalance";
             // 
             // label18
             // 
@@ -373,9 +398,8 @@
             this.lblLimit.AutoSize = true;
             this.lblLimit.Location = new System.Drawing.Point(464, 186);
             this.lblLimit.Name = "lblLimit";
-            this.lblLimit.Size = new System.Drawing.Size(38, 13);
+            this.lblLimit.Size = new System.Drawing.Size(0, 13);
             this.lblLimit.TabIndex = 35;
-            this.lblLimit.Text = "lblLimit";
             // 
             // label20
             // 
@@ -463,60 +487,334 @@
             this.lblPeriod.AutoSize = true;
             this.lblPeriod.Location = new System.Drawing.Point(464, 273);
             this.lblPeriod.Name = "lblPeriod";
-            this.lblPeriod.Size = new System.Drawing.Size(47, 13);
+            this.lblPeriod.Size = new System.Drawing.Size(0, 13);
             this.lblPeriod.TabIndex = 45;
-            this.lblPeriod.Text = "lblPeriod";
             // 
             // lblPeriodUnit
             // 
             this.lblPeriodUnit.AutoSize = true;
             this.lblPeriodUnit.Location = new System.Drawing.Point(464, 286);
             this.lblPeriodUnit.Name = "lblPeriodUnit";
-            this.lblPeriodUnit.Size = new System.Drawing.Size(66, 13);
+            this.lblPeriodUnit.Size = new System.Drawing.Size(0, 13);
             this.lblPeriodUnit.TabIndex = 46;
-            this.lblPeriodUnit.Text = "lblPeriodUnit";
             // 
             // lblPercent
             // 
             this.lblPercent.AutoSize = true;
             this.lblPercent.Location = new System.Drawing.Point(464, 345);
             this.lblPercent.Name = "lblPercent";
-            this.lblPercent.Size = new System.Drawing.Size(54, 13);
+            this.lblPercent.Size = new System.Drawing.Size(0, 13);
             this.lblPercent.TabIndex = 47;
-            this.lblPercent.Text = "lblPercent";
             // 
             // lblInterestUnit
             // 
             this.lblInterestUnit.AutoSize = true;
             this.lblInterestUnit.Location = new System.Drawing.Point(464, 358);
             this.lblInterestUnit.Name = "lblInterestUnit";
-            this.lblInterestUnit.Size = new System.Drawing.Size(71, 13);
+            this.lblInterestUnit.Size = new System.Drawing.Size(0, 13);
             this.lblInterestUnit.TabIndex = 48;
-            this.lblInterestUnit.Text = "lblInterestUnit";
             // 
             // lblStartDate
             // 
             this.lblStartDate.AutoSize = true;
             this.lblStartDate.Location = new System.Drawing.Point(464, 389);
             this.lblStartDate.Name = "lblStartDate";
-            this.lblStartDate.Size = new System.Drawing.Size(62, 13);
+            this.lblStartDate.Size = new System.Drawing.Size(0, 13);
             this.lblStartDate.TabIndex = 49;
-            this.lblStartDate.Text = "lblStartDate";
             // 
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
             this.lblEndDate.Location = new System.Drawing.Point(464, 413);
             this.lblEndDate.Name = "lblEndDate";
-            this.lblEndDate.Size = new System.Drawing.Size(59, 13);
+            this.lblEndDate.Size = new System.Drawing.Size(0, 13);
             this.lblEndDate.TabIndex = 50;
-            this.lblEndDate.Text = "lblEndDate";
+            // 
+            // lblEndDateTo
+            // 
+            this.lblEndDateTo.AutoSize = true;
+            this.lblEndDateTo.Location = new System.Drawing.Point(726, 413);
+            this.lblEndDateTo.Name = "lblEndDateTo";
+            this.lblEndDateTo.Size = new System.Drawing.Size(0, 13);
+            this.lblEndDateTo.TabIndex = 78;
+            // 
+            // lblStartDateTo
+            // 
+            this.lblStartDateTo.AutoSize = true;
+            this.lblStartDateTo.Location = new System.Drawing.Point(726, 389);
+            this.lblStartDateTo.Name = "lblStartDateTo";
+            this.lblStartDateTo.Size = new System.Drawing.Size(0, 13);
+            this.lblStartDateTo.TabIndex = 77;
+            // 
+            // lblInterestUnitTo
+            // 
+            this.lblInterestUnitTo.AutoSize = true;
+            this.lblInterestUnitTo.Location = new System.Drawing.Point(726, 358);
+            this.lblInterestUnitTo.Name = "lblInterestUnitTo";
+            this.lblInterestUnitTo.Size = new System.Drawing.Size(0, 13);
+            this.lblInterestUnitTo.TabIndex = 76;
+            // 
+            // lblPercentTo
+            // 
+            this.lblPercentTo.AutoSize = true;
+            this.lblPercentTo.Location = new System.Drawing.Point(726, 345);
+            this.lblPercentTo.Name = "lblPercentTo";
+            this.lblPercentTo.Size = new System.Drawing.Size(0, 13);
+            this.lblPercentTo.TabIndex = 75;
+            // 
+            // lblPeriodUnitTo
+            // 
+            this.lblPeriodUnitTo.AutoSize = true;
+            this.lblPeriodUnitTo.Location = new System.Drawing.Point(726, 285);
+            this.lblPeriodUnitTo.Name = "lblPeriodUnitTo";
+            this.lblPeriodUnitTo.Size = new System.Drawing.Size(0, 13);
+            this.lblPeriodUnitTo.TabIndex = 74;
+            // 
+            // lblPeriodTo
+            // 
+            this.lblPeriodTo.AutoSize = true;
+            this.lblPeriodTo.Location = new System.Drawing.Point(726, 272);
+            this.lblPeriodTo.Name = "lblPeriodTo";
+            this.lblPeriodTo.Size = new System.Drawing.Size(0, 13);
+            this.lblPeriodTo.TabIndex = 73;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(624, 413);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(50, 13);
+            this.label35.TabIndex = 72;
+            this.label35.Text = "End date";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(624, 389);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(53, 13);
+            this.label36.TabIndex = 71;
+            this.label36.Text = "Start date";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(624, 358);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(60, 13);
+            this.label37.TabIndex = 70;
+            this.label37.Text = "Unit of time";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(624, 345);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(44, 13);
+            this.label38.TabIndex = 69;
+            this.label38.Text = "Percent";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(624, 320);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(63, 13);
+            this.label39.TabIndex = 68;
+            this.label39.Text = "Interest rate";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(624, 286);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(60, 13);
+            this.label40.TabIndex = 67;
+            this.label40.Text = "Unit of time";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(624, 273);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(37, 13);
+            this.label41.TabIndex = 66;
+            this.label41.Text = "Period";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(624, 252);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(37, 13);
+            this.label42.TabIndex = 65;
+            this.label42.Text = "Period";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(624, 221);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(82, 13);
+            this.label43.TabIndex = 64;
+            this.label43.Text = "Deposit specific";
+            // 
+            // lblLimitTo
+            // 
+            this.lblLimitTo.AutoSize = true;
+            this.lblLimitTo.Location = new System.Drawing.Point(726, 186);
+            this.lblLimitTo.Name = "lblLimitTo";
+            this.lblLimitTo.Size = new System.Drawing.Size(0, 13);
+            this.lblLimitTo.TabIndex = 63;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(624, 186);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(28, 13);
+            this.label45.TabIndex = 62;
+            this.label45.Text = "Limit";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(624, 160);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(102, 13);
+            this.label46.TabIndex = 61;
+            this.label46.Text = "Transaction specific";
+            // 
+            // lblBalanceTo
+            // 
+            this.lblBalanceTo.AutoSize = true;
+            this.lblBalanceTo.Location = new System.Drawing.Point(726, 127);
+            this.lblBalanceTo.Name = "lblBalanceTo";
+            this.lblBalanceTo.Size = new System.Drawing.Size(0, 13);
+            this.lblBalanceTo.TabIndex = 60;
+            // 
+            // lblCurrencyTo
+            // 
+            this.lblCurrencyTo.AutoSize = true;
+            this.lblCurrencyTo.Location = new System.Drawing.Point(726, 99);
+            this.lblCurrencyTo.Name = "lblCurrencyTo";
+            this.lblCurrencyTo.Size = new System.Drawing.Size(0, 13);
+            this.lblCurrencyTo.TabIndex = 59;
+            // 
+            // lblNumberTo
+            // 
+            this.lblNumberTo.AutoSize = true;
+            this.lblNumberTo.Location = new System.Drawing.Point(726, 82);
+            this.lblNumberTo.Name = "lblNumberTo";
+            this.lblNumberTo.Size = new System.Drawing.Size(0, 13);
+            this.lblNumberTo.TabIndex = 58;
+            // 
+            // lblIdTo
+            // 
+            this.lblIdTo.AutoSize = true;
+            this.lblIdTo.Location = new System.Drawing.Point(726, 65);
+            this.lblIdTo.Name = "lblIdTo";
+            this.lblIdTo.Size = new System.Drawing.Size(0, 13);
+            this.lblIdTo.TabIndex = 57;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(624, 99);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(49, 13);
+            this.label51.TabIndex = 56;
+            this.label51.Text = "Currency";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(624, 127);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(46, 13);
+            this.label52.TabIndex = 55;
+            this.label52.Text = "Balance";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(624, 82);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(44, 13);
+            this.label53.TabIndex = 54;
+            this.label53.Text = "Number";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(624, 65);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(16, 13);
+            this.label54.TabIndex = 53;
+            this.label54.Text = "Id";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(624, 14);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(86, 13);
+            this.label55.TabIndex = 52;
+            this.label55.Text = "The TO account";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(624, 42);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(48, 13);
+            this.label56.TabIndex = 51;
+            this.label56.Text = "Common";
+            // 
+            // btnMakeTransaction
+            // 
+            this.btnMakeTransaction.Location = new System.Drawing.Point(171, 379);
+            this.btnMakeTransaction.Name = "btnMakeTransaction";
+            this.btnMakeTransaction.Size = new System.Drawing.Size(90, 52);
+            this.btnMakeTransaction.TabIndex = 79;
+            this.btnMakeTransaction.Text = "Make transfer";
+            this.btnMakeTransaction.UseVisualStyleBackColor = true;
+            this.btnMakeTransaction.Click += new System.EventHandler(this.btnMakeTransaction_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 443);
+            this.ClientSize = new System.Drawing.Size(847, 441);
+            this.Controls.Add(this.btnMakeTransaction);
+            this.Controls.Add(this.lblEndDateTo);
+            this.Controls.Add(this.lblStartDateTo);
+            this.Controls.Add(this.lblInterestUnitTo);
+            this.Controls.Add(this.lblPercentTo);
+            this.Controls.Add(this.lblPeriodUnitTo);
+            this.Controls.Add(this.lblPeriodTo);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.label37);
+            this.Controls.Add(this.label38);
+            this.Controls.Add(this.label39);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.label41);
+            this.Controls.Add(this.label42);
+            this.Controls.Add(this.label43);
+            this.Controls.Add(this.lblLimitTo);
+            this.Controls.Add(this.label45);
+            this.Controls.Add(this.label46);
+            this.Controls.Add(this.lblBalanceTo);
+            this.Controls.Add(this.lblCurrencyTo);
+            this.Controls.Add(this.lblNumberTo);
+            this.Controls.Add(this.lblIdTo);
+            this.Controls.Add(this.label51);
+            this.Controls.Add(this.label52);
+            this.Controls.Add(this.label53);
+            this.Controls.Add(this.label54);
+            this.Controls.Add(this.label55);
+            this.Controls.Add(this.label56);
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.lblStartDate);
             this.Controls.Add(this.lblInterestUnit);
@@ -624,6 +922,35 @@
         private System.Windows.Forms.Label lblInterestUnit;
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblEndDate;
+        private System.Windows.Forms.Label lblEndDateTo;
+        private System.Windows.Forms.Label lblStartDateTo;
+        private System.Windows.Forms.Label lblInterestUnitTo;
+        private System.Windows.Forms.Label lblPercentTo;
+        private System.Windows.Forms.Label lblPeriodUnitTo;
+        private System.Windows.Forms.Label lblPeriodTo;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label lblLimitTo;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label lblBalanceTo;
+        private System.Windows.Forms.Label lblCurrencyTo;
+        private System.Windows.Forms.Label lblNumberTo;
+        private System.Windows.Forms.Label lblIdTo;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Button btnMakeTransaction;
     }
 }
 

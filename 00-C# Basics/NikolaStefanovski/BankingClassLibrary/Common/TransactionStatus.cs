@@ -8,6 +8,6 @@ namespace BankingClassLibrary.Common
 {
     public enum TransactionStatus
     {
-        NULL, InProcess, Completed, CompletedWithWarning, Failed
+        none, InProcess, Completed, CompletedWithWarning, Failed
     }
 }

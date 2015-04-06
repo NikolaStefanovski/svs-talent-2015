@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankingClassLibrary.Common
+namespace BankingClassLibrary.Interfaces
 {
-    public enum UnitOfTime
+    public interface ILoanAccount : IDepositAccount
     {
-        none, Day, Month, Year
     }
 }

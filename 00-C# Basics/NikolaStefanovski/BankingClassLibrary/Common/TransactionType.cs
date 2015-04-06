@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BankingClassLibrary.Common
 {
-    enum TransactionType
+    public enum TransactionType
     {
-        NULL, Transfer, Debit, Credit
+        none, Transfer, Debit, Credit
     }
 }

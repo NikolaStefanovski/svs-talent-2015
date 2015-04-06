@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BankingClassLibrary.Common;
+using BankingClassLibrary.Interfaces;
 
-namespace BankingClassLibrary.Accounts
+namespace BankingClassLibrary.Account
 {
     /// <summary>
     /// A standard transacton account with an imposed limit.

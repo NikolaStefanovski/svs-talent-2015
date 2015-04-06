@@ -4,3 +4,7 @@ D:\Seavus\zip\BankingClassLibrary\bin\Debug\BankingClassLibrary.pdb
 D:\Seavus\zip\BankingClassLibrary\obj\Debug\BankingClassLibrary.csprojResolveAssemblyReference.cache
 D:\Seavus\zip\BankingClassLibrary\obj\Debug\BankingClassLibrary.dll
 D:\Seavus\zip\BankingClassLibrary\obj\Debug\BankingClassLibrary.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingClassLibrary\bin\Debug\BankingClassLibrary.dll
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingClassLibrary\bin\Debug\BankingClassLibrary.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingClassLibrary\obj\Debug\BankingClassLibrary.dll
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingClassLibrary\obj\Debug\BankingClassLibrary.pdb

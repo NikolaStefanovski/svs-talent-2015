@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BankingClassLibrary.Common;
-using BankingClassLibrary.Accounts;
+using BankingClassLibrary.Account;
+using BankingClassLibrary.Interfaces;
+using BankingClassLibrary.Processors;
 
 namespace BankingApplication
 {
@@ -23,19 +25,36 @@ namespace BankingApplication
         {
             decimal limit = decimal.Parse(txtLimit.Text);
             TransactionAccount ta = new TransactionAccount(txtCurrency.Text, limit);
+            CurrencyAmount balance = ta.Balance;
+            balance.Amount = 300000;
+            ta.CreditAmount(balance);
             populateAccountCommonDetails(ta);
             populateTransactionDetails(ta);
         }
 
-        private void populateAccountCommonDetails(Account a)
+        private void populateAccountCommonDetails(IAccount a)
         {
-            lblId.Text = a.ID.ToString();
-            lblCurrency.Text = a.Currency;
-            lblNumber.Text = a.Number;
-            lblBalance.Text = a.Balance.Amount.ToString();
+            if (a.GetType().Equals(typeof(TransactionAccount)))
+            {
+                lblId.Text = a.ID.ToString();
+                lblCurrency.Text = a.Currency;
+                lblNumber.Text = a.Number;
+                lblBalance.Text = a.Balance.Amount.ToString();
+            }
+            else
+            {
+                lblIdTo.Text = a.ID.ToString();
+                lblCurrencyTo.Text = a.Currency;
+                lblNumberTo.Text = a.Number;
+                lblBalanceTo.Text = a.Balance.Amount.ToString();
+            }
         }
 
-        private void populateTransactionDetails(Account a) 
+        /// <summary>
+        /// Fills labels for transaction account
+        /// </summary>
+        /// <param name="a"></param>
+        private void populateTransactionDetails(IAccount a) 
         {
             if (a.GetType().Equals(typeof(TransactionAccount)))
             {
@@ -60,31 +79,83 @@ namespace BankingApplication
             DateTime end = dtpEndDate.Value;
 
             DepositAccount da = new DepositAccount(txtCurrency.Text, tp, ir, start, end, null);
+            CurrencyAmount balance = da.Balance;
+            balance.Amount = 50000;
+            da.CreditAmount(balance);
             populateAccountCommonDetails(da);
             populateDepositDetails(da);
         }
 
-        private void populateDepositDetails(Account a)
+        /// <summary>
+        /// Fills labels for deposit account
+        /// </summary>
+        /// <param name="a"></param>
+        private void populateDepositDetails(IAccount a)
         {
             if (a.GetType().Equals(typeof(DepositAccount)))
             {
                 DepositAccount da = (DepositAccount)a;
-                lblPeriod.Text = da.Period.Period.ToString();
-                lblPeriodUnit.Text = da.Period.Unit.ToString();
-                lblPercent.Text = da.Interest.Percent.ToString();
-                lblInterestUnit.Text = da.Interest.Unit.ToString();
-                lblStartDate.Text = da.StartDate.ToString();
-                lblEndDate.Text = da.EndDate.ToString();
+                lblPeriodTo.Text = da.Period.Period.ToString();
+                lblPeriodUnitTo.Text = da.Period.Unit.ToString();
+                lblPercentTo.Text = da.Interest.Percent.ToString();
+                lblInterestUnitTo.Text = da.Interest.Unit.ToString();
+                lblStartDateTo.Text = da.StartDate.ToString();
+                lblEndDateTo.Text = da.EndDate.ToString();
             }
             else
             {
-                lblPeriod.Text = "";
-                lblPeriodUnit.Text = "";
-                lblPercent.Text = "";
-                lblInterestUnit.Text = "";
-                lblStartDate.Text = "";
-                lblEndDate.Text = "";
+                lblPeriodTo.Text = "";
+                lblPeriodUnitTo.Text = "";
+                lblPercentTo.Text = "";
+                lblInterestUnitTo.Text = "";
+                lblStartDateTo.Text = "";
+                lblEndDateTo.Text = "";
             }
+        }
+
+        /// <summary>
+        /// Transfers funds from one account to another
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnMakeTransaction_Click(object sender, EventArgs e)
+        {
+            long idFrom = long.Parse(lblId.Text);
+            string numberFrom = lblNumber.Text;
+            decimal currencyFrom = decimal.Parse(lblLimit.Text);
+            ITransactionAccount ta = new TransactionAccount(lblCurrency.Text, currencyFrom);
+            CurrencyAmount balanceFrom = ta.Balance;
+            balanceFrom.Amount = decimal.Parse(lblBalance.Text);
+            ta.CreditAmount(balanceFrom);
+
+            //long idTo;
+
+            TimePeriod tp;
+            tp.Period = int.Parse(lblPeriodTo.Text);
+            tp.Unit = (UnitOfTime)int.Parse(lblPeriodUnitTo.Text);
+            InterestRate ir;
+            ir.Percent = decimal.Parse(lblPercent.Text);
+            ir.Unit = (UnitOfTime)int.Parse(lblInterestUnit.Text);
+            string start = lblStartDateTo.Text;
+            string end = lblEndDateTo.Text;
+            IDepositAccount da = new DepositAccount(lblCurrencyTo.Text, tp, ir, DateTime.Parse(start), DateTime.Parse(end), null);
+            CurrencyAmount balanceTo = da.Balance;
+            balanceFrom.Amount = decimal.Parse(lblBalanceTo.Text);
+            da.CreditAmount(balanceTo);
+
+
+            CurrencyAmount transferMoney;
+            transferMoney.Currency = "MKD";
+            transferMoney.Amount = 200000;
+
+            TransactionProcessor processor = new TransactionProcessor();
+
+            processor.ProcessTransaction(TransactionType.Transfer, ta, da, transferMoney);
+
+            populateAccountCommonDetails(ta);
+            populateAccountCommonDetails(da);
+            populateTransactionDetails(ta);
+            populateDepositDetails(da);
         }
     }
 }

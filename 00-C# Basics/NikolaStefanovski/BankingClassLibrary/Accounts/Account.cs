@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BankingClassLibrary.Common;
+using BankingClassLibrary.Interfaces;
 
-namespace BankingClassLibrary.Accounts
+namespace BankingClassLibrary.Account
 {
     /// <summary>
     /// Base type for defining a bank account, contains an account id, a transactaion account number, the currency type and the total balance.
@@ -50,17 +51,14 @@ namespace BankingClassLibrary.Accounts
             _number = number;
             _currency = currency;
             _balance.Amount = 0;
-            _balance.Currency = "euro";
+            _balance.Currency = currency;
         }
 
         /// <summary>
         /// A constructor for a skeleton account (only currency type).
         /// </summary>
         /// <param name="currency"></param>
-        public Account(string currency) : this(-1, "X", null)
-        {
-            _currency = currency;
-        }
+        public Account(string currency) : this(-1, "X", currency) {}
         #endregion
 
         #region Public methods
@@ -69,7 +67,7 @@ namespace BankingClassLibrary.Accounts
         /// </summary>
         /// <param name="amount"></param>
         /// <returns></returns>
-        public TransactionStatus DebitAmount(CurrencyAmount amount)
+        public virtual TransactionStatus DebitAmount(CurrencyAmount amount)
         {
             if (!IsCurrencyAmountOK(amount)) return TransactionStatus.Failed;
             _balance.Amount -= amount.Amount;
@@ -80,7 +78,7 @@ namespace BankingClassLibrary.Accounts
         /// </summary>
         /// <param name="amount"></param>
         /// <returns></returns>
-        public TransactionStatus CreditAmount(CurrencyAmount amount)
+        public virtual TransactionStatus CreditAmount(CurrencyAmount amount)
         {
             if (!IsCurrencyAmountOK(amount)) return TransactionStatus.Failed;
             _balance.Amount += amount.Amount;

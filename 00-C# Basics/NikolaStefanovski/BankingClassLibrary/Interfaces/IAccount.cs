@@ -1,5 +1,5 @@
 ﻿using System;
-namespace BankingClassLibrary.Accounts
+namespace BankingClassLibrary.Interfaces
 {
     public interface IAccount
     {

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BankingClassLibrary.Common;
+using BankingClassLibrary.Interfaces;
 
-namespace BankingClassLibrary.Accounts
+namespace BankingClassLibrary.Account
 {
-    public class DepositAccount : Account, BankingClassLibrary.Accounts.IDepositAccount
+    public class DepositAccount : Account, BankingClassLibrary.Interfaces.IDepositAccount
     {
         #region Fields and properties
           
