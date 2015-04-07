@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BankingClassLibrary.Common;
 using BankingClassLibrary.Interfaces;
+using BankingClassLibrary.Helpers;
 
 namespace BankingClassLibrary.Account
 {
@@ -17,7 +18,7 @@ namespace BankingClassLibrary.Account
         private long _id;
         private string _number;
         private string _currency;
-        private CurrencyAmount _balance;
+        protected CurrencyAmount _balance;
 
         /// <summary>
         /// ID number of the account
@@ -58,12 +59,15 @@ namespace BankingClassLibrary.Account
         /// A constructor for a skeleton account (only currency type).
         /// </summary>
         /// <param name="currency"></param>
-        public Account(string currency) : this(-1, "X", currency) {}
+        public Account(string currency) : this(-1, "X", currency) 
+        {
+            _id = AccountHelper.GenerateAccountId();
+        }
         #endregion
 
         #region Public methods
         /// <summary>
-        /// 
+        /// Method for taking money from the account
         /// </summary>
         /// <param name="amount"></param>
         /// <returns></returns>
@@ -74,7 +78,7 @@ namespace BankingClassLibrary.Account
             return TransactionStatus.Completed;
         }
         /// <summary>
-        /// 
+        /// Method for putting money into the account.
         /// </summary>
         /// <param name="amount"></param>
         /// <returns></returns>
@@ -87,7 +91,14 @@ namespace BankingClassLibrary.Account
         #endregion
 
         #region Private methods
-        private bool IsCurrencyAmountOK(CurrencyAmount amount)
+        protected abstract string GenerateAccountNumber();
+
+        /// <summary>
+        /// Checks if the currency of the account equals with the currency of any incoming or outgoing amount.
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        protected bool IsCurrencyAmountOK(CurrencyAmount amount)
         {
             return Balance.Currency.Equals(amount.Currency);
         }

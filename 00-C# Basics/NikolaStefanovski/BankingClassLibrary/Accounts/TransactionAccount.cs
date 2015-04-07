@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BankingClassLibrary.Common;
 using BankingClassLibrary.Interfaces;
+using BankingClassLibrary.Helpers;
 
 namespace BankingClassLibrary.Account
 {
@@ -13,6 +14,8 @@ namespace BankingClassLibrary.Account
     /// </summary>
     public class TransactionAccount : Account, ITransactionAccount
     {
+
+        #region Fields and properties
         /// <summary>
         /// Field for the limit.
         /// </summary>
@@ -22,6 +25,7 @@ namespace BankingClassLibrary.Account
         /// Property for the limit.
         /// </summary>
         public CurrencyAmount Limit { get { return _limit; } set { _limit = value; } }
+        #endregion
 
         /// <summary>
         /// A constructor for a skeleton transaction account (only the limit and the currecny type are defined).
@@ -31,6 +35,11 @@ namespace BankingClassLibrary.Account
         public TransactionAccount(string currency, decimal limitAmount) : base(currency)
         {
             _limit.Amount = limitAmount;
+        }
+
+        protected override string GenerateAccountNumber()
+        {
+            return AccountHelper.GenerateAccountNumber(typeof(TransactionAccount), ID);
         }
     }
 }

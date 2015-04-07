@@ -16,11 +16,20 @@ namespace BankingApplication
 {
     public partial class frmMain : Form
     {
+        /// <summary>
+        /// Initializes the Windows Form object.
+        /// </summary>
         public frmMain()
         {
             InitializeComponent();
         }
 
+        #region Methods for creating instances of accounts.
+        /// <summary>
+        /// Method for creating an instance from the transaction account class.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCreateTransactionAccount_Click(object sender, EventArgs e)
         {
             decimal limit = decimal.Parse(txtLimit.Text);
@@ -32,6 +41,40 @@ namespace BankingApplication
             populateTransactionDetails(ta);
         }
 
+        /// <summary>
+        /// Method for creating an instance from the deposit account class.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCreateDepositAccount_Click(object sender, EventArgs e)
+        {
+            TimePeriod tp;
+            tp.Period = int.Parse(txtPeriodAmount.Text);
+            tp.Unit = parseStringToUoT(txtPeriodUnit.Text);
+            InterestRate ir;
+            ir.Percent = decimal.Parse(txtPercent.Text);
+            ir.Unit = parseStringToUoT(txtInterestUnit.Text);
+            DateTime start = dtpStartDate.Value;
+            DateTime end = dtpEndDate.Value;
+
+            DepositAccount da = new DepositAccount(txtCurrency.Text, tp, ir, start, end, null);
+            CurrencyAmount balance = da.Balance;
+            balance.Amount = 50000;
+            da.CreditAmount(balance);
+            populateAccountCommonDetails(da);
+            populateDepositDetails(da);
+        }
+
+        private void CreateLoanAccount() {
+
+        }
+        #endregion
+
+        #region Methods for populating the labels.
+        /// <summary>
+        /// Fills the labels for the common details amoung accounts.
+        /// </summary>
+        /// <param name="a"></param>
         private void populateAccountCommonDetails(IAccount a)
         {
             if (a.GetType().Equals(typeof(TransactionAccount)))
@@ -67,25 +110,6 @@ namespace BankingApplication
             }
         }
 
-        private void btnCreateDepositAccount_Click(object sender, EventArgs e)
-        {
-            TimePeriod tp;
-            tp.Period = int.Parse(txtPeriodAmount.Text);
-            tp.Unit = (UnitOfTime)int.Parse(txtPeriodUnit.Text);
-            InterestRate ir;
-            ir.Percent = decimal.Parse(txtPercent.Text);
-            ir.Unit = (UnitOfTime)int.Parse(txtInterestUnit.Text);
-            DateTime start = dtpStartDate.Value;
-            DateTime end = dtpEndDate.Value;
-
-            DepositAccount da = new DepositAccount(txtCurrency.Text, tp, ir, start, end, null);
-            CurrencyAmount balance = da.Balance;
-            balance.Amount = 50000;
-            da.CreditAmount(balance);
-            populateAccountCommonDetails(da);
-            populateDepositDetails(da);
-        }
-
         /// <summary>
         /// Fills labels for deposit account
         /// </summary>
@@ -112,6 +136,19 @@ namespace BankingApplication
                 lblEndDateTo.Text = "";
             }
         }
+        #endregion
+
+        #region Various methods
+        private UnitOfTime parseStringToUoT(string s)
+        {
+            switch (s.ToLower())
+            {
+                case "day" : return UnitOfTime.Day;
+                case "month" : return UnitOfTime.Month;
+                case "year": return UnitOfTime.Year;
+                default: return UnitOfTime.none;
+            }
+        }
 
         /// <summary>
         /// Transfers funds from one account to another
@@ -132,10 +169,10 @@ namespace BankingApplication
 
             TimePeriod tp;
             tp.Period = int.Parse(lblPeriodTo.Text);
-            tp.Unit = (UnitOfTime)int.Parse(lblPeriodUnitTo.Text);
+            tp.Unit = parseStringToUoT(lblPeriodUnitTo.Text);
             InterestRate ir;
-            ir.Percent = decimal.Parse(lblPercent.Text);
-            ir.Unit = (UnitOfTime)int.Parse(lblInterestUnit.Text);
+            ir.Percent = decimal.Parse(lblPercentTo.Text);
+            ir.Unit = parseStringToUoT(lblInterestUnitTo.Text);
             string start = lblStartDateTo.Text;
             string end = lblEndDateTo.Text;
             IDepositAccount da = new DepositAccount(lblCurrencyTo.Text, tp, ir, DateTime.Parse(start), DateTime.Parse(end), null);
@@ -157,5 +194,6 @@ namespace BankingApplication
             populateTransactionDetails(ta);
             populateDepositDetails(da);
         }
+        #endregion
     }
 }
