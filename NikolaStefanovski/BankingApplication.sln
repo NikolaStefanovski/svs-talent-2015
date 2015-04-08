@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingApplication", "BankingApplication\BankingApplication.csproj", "{57B5FB37-FBD7-4EC1-BDAE-910412E48BB3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5EA0DF6F-06D4-461F-96ED-C228A49388CE} = {5EA0DF6F-06D4-461F-96ED-C228A49388CE}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingClassLibrary", "BankingClassLibrary\BankingClassLibrary.csproj", "{38B4EA5B-2DA6-40EB-940A-063F457D2C91}"
 EndProject

@@ -12,11 +12,11 @@ namespace MyWCFService2
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IMyService
     {
-        public string GetAccountBalance(AccountService account)
-        {
-            return account.TheAccount.Balance.Amount + " " + account.TheAccount.Balance.Currency;
-        }
-
+        //public string GetAccountBalance(AccountService account)
+        //{
+           // return account.TheAccount.Balance.Amount + " " + account.TheAccount.Balance.Currency;
+       // }
+   
         public StringMagic DoSomeMagicToString(StringMagic theString)
         {
             if (theString == null)

@@ -21,8 +21,8 @@ namespace MyWCFService2
         [OperationContract]
         StringMagic DoSomeMagicToString(StringMagic sBuilder);
 
-        [OperationContract]
-        string GetAccountBalance(AccountService account);
+        //[OperationContract]
+        //string GetAccountBalance(AccountService account);
     }
 
 
@@ -48,6 +48,7 @@ namespace MyWCFService2
         }
     }
 
+    /*
     [DataContract]
     public class AccountService
     {
@@ -60,4 +61,5 @@ namespace MyWCFService2
             set { _account = value; }
         }
     }
+     */
 }
