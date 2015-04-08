@@ -13,3 +13,7 @@ C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\Bank
 C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingClassLibrary\obj\Debug\BankingClassLibrary.dll
 C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingClassLibrary\obj\Debug\BankingClassLibrary.pdb
 C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingClassLibrary\obj\Debug\BankingClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingClassLibrary\obj\Debug\BankingClassLibrary.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingClassLibrary\obj\Debug\BankingClassLibrary.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingClassLibrary\bin\Debug\BankingClassLibrary.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingClassLibrary\bin\Debug\BankingClassLibrary.pdb
