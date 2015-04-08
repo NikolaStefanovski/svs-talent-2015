@@ -188,7 +188,7 @@ namespace BankingApplication
 
             CurrencyAmount transferMoney;
             transferMoney.Currency = "MKD";
-            transferMoney.Amount = 200000;
+            transferMoney.Amount = 300000;
 
             processor = TransactionProcessor.GetTransactionProcessor();
 
@@ -240,7 +240,7 @@ namespace BankingApplication
             processor = TransactionProcessor.GetTransactionProcessor();
             txtStatus.Text = processor.ProcessGroupTransaction(TransactionType.Debit, amount, accounts).ToString();
             lblCount.Text = processor.TransactionCount.ToString();
-
+            
             lblType.Text = processor.LastTransaction.TransactionType.ToString();
             lblStatus.Text = processor.LastTransaction.Status.ToString();
             lblAmount.Text = processor.LastTransaction.Amount.Amount.ToString() + "   " + processor.LastTransaction.Amount.Currency;

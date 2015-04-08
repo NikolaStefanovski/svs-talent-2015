@@ -1,4 +1,5 @@
 ﻿using BankingClassLibrary.Accounts;
+using BankingClassLibrary.Common;
 using BankingClassLibrary.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,25 @@ namespace BankingClassLibrary.Helpers
                 case "DepositAccount": return "DP0000" + accountId;
                 case "LoanAccount": return "LN0000" + accountId;
                 default: return null;
+            }
+        }
+
+        public static void LogTransaction(IAccount account, TransactionType type, CurrencyAmount amount)
+        {
+            if (amount.Amount > 20000)
+            {
+                Console.WriteLine("Account No.: " + account.Number);
+                Console.WriteLine("Type: " + type);
+                Console.WriteLine("Amount: " + amount.Amount + " " + amount.Currency);
+
+            }
+        }
+
+        public static void NotifyNationalBank(IAccount account, TransactionType type, CurrencyAmount amount) 
+        {
+            if (amount.Amount > 25000)
+            {
+                Console.WriteLine("Too much money, off to prison!");
             }
         }
     }

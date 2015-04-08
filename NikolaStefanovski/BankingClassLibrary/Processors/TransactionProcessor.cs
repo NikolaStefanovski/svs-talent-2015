@@ -1,4 +1,5 @@
 ﻿using BankingClassLibrary.Common;
+using BankingClassLibrary.Helpers;
 using BankingClassLibrary.Interfaces;
 using System;
 using System.Collections;
@@ -14,6 +15,7 @@ namespace BankingClassLibrary.Processors
         #region Fields and props
         private IList<TransactionLogEntry> _transactionLog;
         private static TransactionProcessor _instance;
+        private TransactionLogger _externalLogger;
 
         /// <summary>
         /// Propert for getting last transaction
@@ -45,19 +47,41 @@ namespace BankingClassLibrary.Processors
                 if (key >= _transactionLog.Count) return null;
                 return _transactionLog[key];
             }
+        }      
+
+        /// <summary>
+        /// Property for a delegate for external methods.
+        /// </summary>
+        public TransactionLogger ExternalLogger
+        {
+            get { return _externalLogger; }
+            set { _externalLogger = value; }
         }
+
         #endregion 
 
+        #region Constructors
         /// <summary>
         /// Private normal constr.
         /// </summary>
         private TransactionProcessor()
         {
             _transactionLog = new List<TransactionLogEntry>();
+            _externalLogger = new TransactionLogger(AccountHelper.LogTransaction);
+            _externalLogger += new TransactionLogger(AccountHelper.NotifyNationalBank);
         }
 
+        
+
+        static TransactionProcessor()
+        {
+            _instance = new TransactionProcessor();         
+        }
+        #endregion
+
+        #region Private methods
         /// <summary>
-        /// Method for incerasing the count and addind the new entry;
+        /// Method for increasing the count and addind the new entry;
         /// </summary>
         /// <param name="transactionType"></param>
         /// <param name="amount"></param>
@@ -69,10 +93,11 @@ namespace BankingClassLibrary.Processors
             _transactionLog.Add(new TransactionLogEntry(transactionType, amount, accounts, transactionStatus));
         }
 
-        static TransactionProcessor()
+        private void CallExternalLogger(IAccount account, TransactionType type, CurrencyAmount amount)
         {
-            _instance = new TransactionProcessor();
+            ExternalLogger(account, type, amount);
         }
+        #endregion 
 
         #region Public methods
         public static TransactionProcessor GetTransactionProcessor() {
@@ -96,6 +121,8 @@ namespace BankingClassLibrary.Processors
             }
             IAccount[] accounts = { accountFrom, accountTo };
             LogTransaction(type, amount, accounts, TransactionStatus.Completed);
+            CallExternalLogger(accountFrom, type, amount);
+            CallExternalLogger(accountTo, type, amount);
         }
 
         public TransactionStatus ProcessGroupTransaction(TransactionType transactionType, CurrencyAmount amount, IAccount[] accounts)
@@ -122,6 +149,8 @@ namespace BankingClassLibrary.Processors
                 }
             }
             LogTransaction(transactionType, amount, accounts, TransactionStatus.Completed);
+            CallExternalLogger(accounts[0], transactionType, amount);
+            CallExternalLogger(accounts[1], transactionType, amount);
             return TransactionStatus.Completed;
         }
         #endregion

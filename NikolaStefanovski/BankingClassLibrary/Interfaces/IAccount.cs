@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankingClassLibrary.Common;
+using System;
 namespace BankingClassLibrary.Interfaces
 {
     public interface IAccount
@@ -9,5 +10,6 @@ namespace BankingClassLibrary.Interfaces
         BankingClassLibrary.Common.TransactionStatus DebitAmount(BankingClassLibrary.Common.CurrencyAmount amount);
         long ID { get; }
         string Number { get; }
+        event BalanceChanged OnBalanceChanged;
     }
 }

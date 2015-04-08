@@ -20,6 +20,8 @@ namespace BankingClassLibrary.Accounts
         protected string _currency;
         protected CurrencyAmount _balance;
 
+        protected event BalanceChanged OnBalanceChanged;
+
         /// <summary>
         /// ID number of the account
         /// </summary>
@@ -35,7 +37,24 @@ namespace BankingClassLibrary.Accounts
         /// <summary>
         /// the balance of the account
         /// </summary>
-        public CurrencyAmount Balance { get { return _balance; } private set { _balance = value; } }
+        public CurrencyAmount Balance 
+        { 
+            get { return _balance; } 
+            private set 
+            {
+                CurrencyAmount temp = value;
+                CurrencyAmount ch;
+                ch.Currency = temp.Currency;
+                if (temp.Amount > _balance.Amount) ch.Amount = temp.Amount - _balance.Amount;
+                else ch.Amount = _balance.Amount - temp.Amount;
+                if (temp.Amount != _balance.Amount)
+                {
+                    OnBalanceChanged(this, new BalanceChangedEventArguments(this, ch));
+                }
+                
+                _balance = value; 
+            } 
+        }
         #endregion
 
         #region Constructors
