@@ -50,3 +50,14 @@ C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplicatio
 C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.frmMain.resources
 C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.Properties.Resources.resources
 C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.csproj.GenerateResource.Cache
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.exe.config
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.exe
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.exe
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingClassLibrary.dll
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingClassLibrary.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.csprojResolveAssemblyReference.cache
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.frmMain.resources
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.Properties.Resources.resources
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.csproj.GenerateResource.Cache

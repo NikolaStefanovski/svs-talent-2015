@@ -1,4 +1,5 @@
-﻿using BankingClassLibrary.Account;
+﻿using BankingClassLibrary.Accounts;
+using BankingClassLibrary.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,9 @@ namespace BankingClassLibrary.Helpers
             return s_AccountId++;
         }
 
-        public static string GenerateAccountNumber(Type accountType, long accountId)
+        public static string GenerateAccountNumber<T>(long accountId) where T : IAccount
         {
-            switch (accountType.Name)
+            switch (typeof(T).Name)
             {
                 case "TransactionAccount": return "TR0000" + accountId;
                 case "DepositAccount": return "DP0000" + accountId;

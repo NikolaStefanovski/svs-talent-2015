@@ -7,7 +7,7 @@ using BankingClassLibrary.Common;
 using BankingClassLibrary.Interfaces;
 using BankingClassLibrary.Helpers;
 
-namespace BankingClassLibrary.Account
+namespace BankingClassLibrary.Accounts
 {
     public class DepositAccount : Account, BankingClassLibrary.Interfaces.IDepositAccount
     {
@@ -48,11 +48,12 @@ namespace BankingClassLibrary.Account
             StartDate = startDate;
             EndDate = endDate;
             TransactionAccount = transactionAccount;
+            _number = GenerateAccountNumber();
         }
 
         protected override string GenerateAccountNumber()
         {
-            return AccountHelper.GenerateAccountNumber(typeof(DepositAccount), ID);
+            return AccountHelper.GenerateAccountNumber<DepositAccount>(ID);
         }
     }
 }

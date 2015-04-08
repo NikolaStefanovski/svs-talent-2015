@@ -1,4 +1,4 @@
-﻿using BankingClassLibrary.Account;
+﻿using BankingClassLibrary.Accounts;
 using BankingClassLibrary.Common;
 using BankingClassLibrary.Helpers;
 using BankingClassLibrary.Interfaces;
@@ -13,7 +13,7 @@ namespace BankingClassLibrary.Accounts
     /// <summary>
     /// A class modeling a loan account, not inheritable (sealed).
     /// </summary>
-    sealed class LoanAccount : DepositAccount, ILoanAccount
+    public sealed class LoanAccount : DepositAccount, ILoanAccount
     {
         /// <summary>
         /// Full constructor with base from DepositAccount (skeleton Account constr.)
@@ -26,12 +26,12 @@ namespace BankingClassLibrary.Accounts
         /// <param name="transactionAccount"></param>
         public LoanAccount(string currency, TimePeriod timePeriod, InterestRate interestRate, DateTime startDate, DateTime endDate, TransactionAccount transactionAccount) : base(currency, timePeriod, interestRate, startDate, endDate, transactionAccount)
         {
-
+            _number = GenerateAccountNumber();
         }
 
         protected override string GenerateAccountNumber()
         {
-            return AccountHelper.GenerateAccountNumber(typeof(LoanAccount), ID);
+            return AccountHelper.GenerateAccountNumber<LoanAccount>(ID);
         }
 
         #region Public methods

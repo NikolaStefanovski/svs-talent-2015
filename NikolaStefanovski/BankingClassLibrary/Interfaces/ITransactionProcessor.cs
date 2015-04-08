@@ -1,4 +1,5 @@
 ﻿using BankingClassLibrary.Common;
+using BankingClassLibrary.Processors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,15 @@ namespace BankingClassLibrary.Interfaces
 {
     public interface ITransactionProcessor
     {
+        TransactionLogEntry LastTransaction { get; }
+
+        int TransactionCount { get; }
+
+        //TransactionLogEntry[] _entries;
+
+        TransactionLogEntry this[int key] { get; }
+
         void ProcessTransaction(TransactionType type, IAccount accountFrom, IAccount accountTo, CurrencyAmount amount);
+        TransactionStatus ProcessGroupTransaction(TransactionType transactionType, CurrencyAmount amount, IAccount[] accounts);
     }
 }

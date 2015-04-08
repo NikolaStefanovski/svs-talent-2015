@@ -113,6 +113,25 @@
             this.btnMagic = new System.Windows.Forms.Button();
             this.txtMagicStringInput = new System.Windows.Forms.TextBox();
             this.txtMagicStringResult = new System.Windows.Forms.TextBox();
+            this.btnMakeGroupTransaction = new System.Windows.Forms.Button();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblType = new System.Windows.Forms.Label();
+            this.lblAmount = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.txtIndex = new System.Windows.Forms.TextBox();
+            this.lblAmount2 = new System.Windows.Forms.Label();
+            this.lblType2 = new System.Windows.Forms.Label();
+            this.lblStatus2 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCreateTransactionAccount
@@ -849,11 +868,200 @@
             this.txtMagicStringResult.Size = new System.Drawing.Size(145, 20);
             this.txtMagicStringResult.TabIndex = 86;
             // 
+            // btnMakeGroupTransaction
+            // 
+            this.btnMakeGroupTransaction.Location = new System.Drawing.Point(267, 379);
+            this.btnMakeGroupTransaction.Name = "btnMakeGroupTransaction";
+            this.btnMakeGroupTransaction.Size = new System.Drawing.Size(76, 52);
+            this.btnMakeGroupTransaction.TabIndex = 87;
+            this.btnMakeGroupTransaction.Text = "Make Group Transaction";
+            this.btnMakeGroupTransaction.UseVisualStyleBackColor = true;
+            this.btnMakeGroupTransaction.Click += new System.EventHandler(this.btnMakeGroupTransaction_Click);
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.Location = new System.Drawing.Point(267, 437);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.ReadOnly = true;
+            this.txtStatus.Size = new System.Drawing.Size(76, 20);
+            this.txtStatus.TabIndex = 88;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(9, 525);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(82, 13);
+            this.label29.TabIndex = 89;
+            this.label29.Text = "Last transaction";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(9, 552);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(37, 13);
+            this.label30.TabIndex = 90;
+            this.label30.Text = "Status";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(9, 578);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(31, 13);
+            this.label31.TabIndex = 91;
+            this.label31.Text = "Type";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(9, 603);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(43, 13);
+            this.label32.TabIndex = 92;
+            this.label32.Text = "Amount";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(90, 552);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(41, 13);
+            this.lblStatus.TabIndex = 94;
+            this.lblStatus.Text = "label34";
+            // 
+            // lblType
+            // 
+            this.lblType.AutoSize = true;
+            this.lblType.Location = new System.Drawing.Point(90, 578);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(41, 13);
+            this.lblType.TabIndex = 95;
+            this.lblType.Text = "label44";
+            // 
+            // lblAmount
+            // 
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Location = new System.Drawing.Point(90, 603);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(41, 13);
+            this.lblAmount.TabIndex = 96;
+            this.lblAmount.Text = "label47";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(9, 647);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(35, 13);
+            this.label33.TabIndex = 97;
+            this.label33.Text = "Count";
+            // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.Location = new System.Drawing.Point(90, 647);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(13, 13);
+            this.lblCount.TabIndex = 98;
+            this.lblCount.Text = "0";
+            // 
+            // txtIndex
+            // 
+            this.txtIndex.Location = new System.Drawing.Point(307, 522);
+            this.txtIndex.Name = "txtIndex";
+            this.txtIndex.Size = new System.Drawing.Size(100, 20);
+            this.txtIndex.TabIndex = 99;
+            this.txtIndex.TextChanged += new System.EventHandler(this.txtIndex_TextChanged);
+            // 
+            // lblAmount2
+            // 
+            this.lblAmount2.AutoSize = true;
+            this.lblAmount2.Location = new System.Drawing.Point(269, 603);
+            this.lblAmount2.Name = "lblAmount2";
+            this.lblAmount2.Size = new System.Drawing.Size(41, 13);
+            this.lblAmount2.TabIndex = 106;
+            this.lblAmount2.Text = "label47";
+            // 
+            // lblType2
+            // 
+            this.lblType2.AutoSize = true;
+            this.lblType2.Location = new System.Drawing.Point(269, 578);
+            this.lblType2.Name = "lblType2";
+            this.lblType2.Size = new System.Drawing.Size(41, 13);
+            this.lblType2.TabIndex = 105;
+            this.lblType2.Text = "label44";
+            // 
+            // lblStatus2
+            // 
+            this.lblStatus2.AutoSize = true;
+            this.lblStatus2.Location = new System.Drawing.Point(269, 552);
+            this.lblStatus2.Name = "lblStatus2";
+            this.lblStatus2.Size = new System.Drawing.Size(41, 13);
+            this.lblStatus2.TabIndex = 104;
+            this.lblStatus2.Text = "label34";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(188, 603);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(43, 13);
+            this.label48.TabIndex = 103;
+            this.label48.Text = "Amount";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(188, 578);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(31, 13);
+            this.label49.TabIndex = 102;
+            this.label49.Text = "Type";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(188, 552);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(37, 13);
+            this.label50.TabIndex = 101;
+            this.label50.Text = "Status";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(188, 525);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(84, 13);
+            this.label57.TabIndex = 100;
+            this.label57.Text = "Transaction Info";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 502);
+            this.ClientSize = new System.Drawing.Size(847, 672);
+            this.Controls.Add(this.lblAmount2);
+            this.Controls.Add(this.lblType2);
+            this.Controls.Add(this.lblStatus2);
+            this.Controls.Add(this.label48);
+            this.Controls.Add(this.label49);
+            this.Controls.Add(this.label50);
+            this.Controls.Add(this.label57);
+            this.Controls.Add(this.txtIndex);
+            this.Controls.Add(this.lblCount);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.lblAmount);
+            this.Controls.Add(this.lblType);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.label32);
+            this.Controls.Add(this.label31);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(this.btnMakeGroupTransaction);
             this.Controls.Add(this.txtMagicStringResult);
             this.Controls.Add(this.txtMagicStringInput);
             this.Controls.Add(this.btnMagic);
@@ -1033,6 +1241,25 @@
         private System.Windows.Forms.Button btnMagic;
         private System.Windows.Forms.TextBox txtMagicStringInput;
         private System.Windows.Forms.TextBox txtMagicStringResult;
+        private System.Windows.Forms.Button btnMakeGroupTransaction;
+        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblType;
+        private System.Windows.Forms.Label lblAmount;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.TextBox txtIndex;
+        private System.Windows.Forms.Label lblAmount2;
+        private System.Windows.Forms.Label lblType2;
+        private System.Windows.Forms.Label lblStatus2;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label57;
     }
 }
 

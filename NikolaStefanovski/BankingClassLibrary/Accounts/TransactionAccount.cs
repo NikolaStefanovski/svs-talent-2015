@@ -7,7 +7,7 @@ using BankingClassLibrary.Common;
 using BankingClassLibrary.Interfaces;
 using BankingClassLibrary.Helpers;
 
-namespace BankingClassLibrary.Account
+namespace BankingClassLibrary.Accounts
 {
     /// <summary>
     /// A standard transacton account with an imposed limit.
@@ -35,11 +35,12 @@ namespace BankingClassLibrary.Account
         public TransactionAccount(string currency, decimal limitAmount) : base(currency)
         {
             _limit.Amount = limitAmount;
+            _number = GenerateAccountNumber();
         }
 
         protected override string GenerateAccountNumber()
         {
-            return AccountHelper.GenerateAccountNumber(typeof(TransactionAccount), ID);
+            return AccountHelper.GenerateAccountNumber<TransactionAccount>(ID);
         }
     }
 }

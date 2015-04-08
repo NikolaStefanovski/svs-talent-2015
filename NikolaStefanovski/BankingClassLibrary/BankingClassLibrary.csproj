@@ -42,6 +42,7 @@
     <Compile Include="Accounts\Account.cs" />
     <Compile Include="Accounts\DepositAccount.cs" />
     <Compile Include="Accounts\LoanAccount.cs" />
+    <Compile Include="Common\Delegates.cs" />
     <Compile Include="Helpers\AccountHelper.cs" />
     <Compile Include="Interfaces\IDepositAccount.cs" />
     <Compile Include="Interfaces\ILoanAccount.cs" />
@@ -54,11 +55,13 @@
     <Compile Include="Common\TransactionType.cs" />
     <Compile Include="Common\UnitOftime.cs" />
     <Compile Include="Interfaces\ITransactionProcessor.cs" />
+    <Compile Include="Processors\TransactionLogEntry.cs" />
     <Compile Include="Processors\TransactionProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Accounts\TransactionAccount.cs" />
     <Compile Include="MyCollection.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

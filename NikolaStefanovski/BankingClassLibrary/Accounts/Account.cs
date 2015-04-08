@@ -7,7 +7,7 @@ using BankingClassLibrary.Common;
 using BankingClassLibrary.Interfaces;
 using BankingClassLibrary.Helpers;
 
-namespace BankingClassLibrary.Account
+namespace BankingClassLibrary.Accounts
 {
     /// <summary>
     /// Base type for defining a bank account, contains an account id, a transactaion account number, the currency type and the total balance.
@@ -15,9 +15,9 @@ namespace BankingClassLibrary.Account
     abstract public class Account : IAccount
     {
         #region Fields and properties
-        private long _id;
-        private string _number;
-        private string _currency;
+        protected long _id;
+        protected string _number;
+        protected string _currency;
         protected CurrencyAmount _balance;
 
         /// <summary>
@@ -59,9 +59,9 @@ namespace BankingClassLibrary.Account
         /// A constructor for a skeleton account (only currency type).
         /// </summary>
         /// <param name="currency"></param>
-        public Account(string currency) : this(-1, "X", currency) 
+        public Account(string currency) : this(AccountHelper.GenerateAccountId(), "X", currency) 
         {
-            _id = AccountHelper.GenerateAccountId();
+    
         }
         #endregion
 

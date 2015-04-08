@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BankingClassLibrary.Common;
-using BankingClassLibrary.Account;
+//using BankingClassLibrary.Account;
 using BankingClassLibrary.Interfaces;
 using BankingClassLibrary.Processors;
 using BankingApplication.MyService;
-//using BankingApplication.MyService;
+using BankingClassLibrary.Accounts;
 
 namespace BankingApplication
 {
     public partial class frmMain : Form
     {
+
+        private TransactionProcessor processor;
+
         /// <summary>
         /// Initializes the Windows Form object.
         /// </summary>
@@ -187,7 +190,7 @@ namespace BankingApplication
             transferMoney.Currency = "MKD";
             transferMoney.Amount = 200000;
 
-            TransactionProcessor processor = new TransactionProcessor();
+            processor = TransactionProcessor.GetTransactionProcessor();
 
             processor.ProcessTransaction(TransactionType.Transfer, ta, da, transferMoney);
 
@@ -214,6 +217,42 @@ namespace BankingApplication
             MyServiceClient client = new MyServiceClient("BasicHttpBinding_IMyService");
 
             txtMagicStringResult.Text = client.DoSomeMagicToString(s).StringValue;         
+        }
+
+        private void btnMakeGroupTransaction_Click(object sender, EventArgs e)
+        {
+            IAccount[] accounts = new IAccount[2];
+
+            TimePeriod tr;
+            tr.Period = 12;
+            tr.Unit = UnitOfTime.Year;
+            InterestRate ir;
+            ir.Percent = 10;
+            ir.Unit = UnitOfTime.Year;
+
+            accounts[0] = new DepositAccount("mkd", tr, ir, DateTime.Now, DateTime.Now, null);
+            accounts[1] = new LoanAccount("mkd", tr, ir, DateTime.Now, DateTime.Now, null);
+
+            CurrencyAmount amount;
+            amount.Currency = "mkd";
+            amount.Amount = 1000;
+
+            processor = TransactionProcessor.GetTransactionProcessor();
+            txtStatus.Text = processor.ProcessGroupTransaction(TransactionType.Debit, amount, accounts).ToString();
+            lblCount.Text = processor.TransactionCount.ToString();
+
+            lblType.Text = processor.LastTransaction.TransactionType.ToString();
+            lblStatus.Text = processor.LastTransaction.Status.ToString();
+            lblAmount.Text = processor.LastTransaction.Amount.Amount.ToString() + "   " + processor.LastTransaction.Amount.Currency;
+        }
+
+        private void txtIndex_TextChanged(object sender, EventArgs e)
+        {
+            processor = TransactionProcessor.GetTransactionProcessor();
+            int index = int.Parse(txtIndex.Text);
+            lblType2.Text = processor[index].TransactionType.ToString();
+            lblStatus2.Text = processor[index].Status.ToString();
+            lblAmount2.Text = processor[index].Amount.Amount.ToString() + "   " + processor[index].Amount.Currency;
         }
     }
 }
