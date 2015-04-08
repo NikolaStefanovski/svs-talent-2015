@@ -8,22 +8,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BankingApplication.BankingService {
+namespace BankingApplication.MyService {
     using System.Runtime.Serialization;
     using System;
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/MyWCFService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StringMagic", Namespace="http://schemas.datacontract.org/2004/07/MyWCFService")]
     [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class StringMagic : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
+        private bool SmallField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StringValueField;
@@ -39,14 +39,14 @@ namespace BankingApplication.BankingService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
+        public bool Small {
             get {
-                return this.BoolValueField;
+                return this.SmallField;
             }
             set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
+                if ((this.SmallField.Equals(value) != true)) {
+                    this.SmallField = value;
+                    this.RaisePropertyChanged("Small");
                 }
             }
         }
@@ -75,23 +75,17 @@ namespace BankingApplication.BankingService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BankingService.IMyService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MyService.IMyService")]
     public interface IMyService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyService/GetData", ReplyAction="http://tempuri.org/IMyService/GetDataResponse")]
-        string GetData(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyService/DoSomeMagicToString", ReplyAction="http://tempuri.org/IMyService/DoSomeMagicToStringResponse")]
+        BankingApplication.MyService.StringMagic DoSomeMagicToString(BankingApplication.MyService.StringMagic sBuilder);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyService/GetData", ReplyAction="http://tempuri.org/IMyService/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IMyService/GetDataUsingDataContractResponse")]
-        BankingApplication.BankingService.CompositeType GetDataUsingDataContract(BankingApplication.BankingService.CompositeType composite);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IMyService/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<BankingApplication.BankingService.CompositeType> GetDataUsingDataContractAsync(BankingApplication.BankingService.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyService/DoSomeMagicToString", ReplyAction="http://tempuri.org/IMyService/DoSomeMagicToStringResponse")]
+        System.Threading.Tasks.Task<BankingApplication.MyService.StringMagic> DoSomeMagicToStringAsync(BankingApplication.MyService.StringMagic sBuilder);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyService/GetAccountBalance", ReplyAction="http://tempuri.org/IMyService/GetAccountBalanceResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(BankingApplication.BankingService.CompositeType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(BankingApplication.MyService.StringMagic))]
         string GetAccountBalance(object account);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMyService/GetAccountBalance", ReplyAction="http://tempuri.org/IMyService/GetAccountBalanceResponse")]
@@ -99,12 +93,12 @@ namespace BankingApplication.BankingService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IMyServiceChannel : BankingApplication.BankingService.IMyService, System.ServiceModel.IClientChannel {
+    public interface IMyServiceChannel : BankingApplication.MyService.IMyService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class MyServiceClient : System.ServiceModel.ClientBase<BankingApplication.BankingService.IMyService>, BankingApplication.BankingService.IMyService {
+    public partial class MyServiceClient : System.ServiceModel.ClientBase<BankingApplication.MyService.IMyService>, BankingApplication.MyService.IMyService {
         
         public MyServiceClient() {
         }
@@ -125,20 +119,12 @@ namespace BankingApplication.BankingService {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
+        public BankingApplication.MyService.StringMagic DoSomeMagicToString(BankingApplication.MyService.StringMagic sBuilder) {
+            return base.Channel.DoSomeMagicToString(sBuilder);
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
-        }
-        
-        public BankingApplication.BankingService.CompositeType GetDataUsingDataContract(BankingApplication.BankingService.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContract(composite);
-        }
-        
-        public System.Threading.Tasks.Task<BankingApplication.BankingService.CompositeType> GetDataUsingDataContractAsync(BankingApplication.BankingService.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
+        public System.Threading.Tasks.Task<BankingApplication.MyService.StringMagic> DoSomeMagicToStringAsync(BankingApplication.MyService.StringMagic sBuilder) {
+            return base.Channel.DoSomeMagicToStringAsync(sBuilder);
         }
         
         public string GetAccountBalance(object account) {

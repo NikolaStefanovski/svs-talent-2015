@@ -11,6 +11,7 @@ using BankingClassLibrary.Common;
 using BankingClassLibrary.Account;
 using BankingClassLibrary.Interfaces;
 using BankingClassLibrary.Processors;
+using BankingApplication.MyService;
 
 namespace BankingApplication
 {
@@ -22,7 +23,7 @@ namespace BankingApplication
         public frmMain()
         {
             InitializeComponent();
-        }
+        } 
 
         #region Methods for creating instances of accounts.
         /// <summary>
@@ -195,5 +196,23 @@ namespace BankingApplication
             populateDepositDetails(da);
         }
         #endregion
+
+        private void btnGetBalance_Click(object sender, EventArgs e)
+        {
+            MyServiceClient service = new MyServiceClient();
+
+            txtBalance.Text = service.GetAccountBalance(new TransactionAccount("euro", 10000));
+        }
+
+        private void btnMagic_Click(object sender, EventArgs e)
+        {
+            StringMagic s = new StringMagic();
+            s.Small = chkSmall.Checked;
+            s.StringValue = txtMagicStringInput.Text;
+
+            MyServiceClient client = new MyServiceClient();
+
+            txtMagicStringResult.Text = client.DoSomeMagicToString(s).StringValue;         
+        }
     }
 }

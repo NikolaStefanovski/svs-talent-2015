@@ -13,37 +13,38 @@ namespace MyWCFService
     [ServiceContract]
     public interface IMyService
     {
+        /// <summary>
+        /// Makes big letters small!
+        /// </summary>
+        /// <param name="sBuilder"></param>
+        /// <returns></returns>
         [OperationContract]
-        string GetData(int value);
-
-        [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        StringMagic DoSomeMagicToString(StringMagic sBuilder);
 
         [OperationContract]
         string GetAccountBalance(IAccount account);
-        // TODO: Add your service operations here
     }
 
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
     [DataContract]
-    public class CompositeType
+    public class StringMagic
     {
-        bool boolValue = true;
-        string stringValue = "Hello ";
+        bool _small = true;
+        string _stringValue = "";
 
         [DataMember]
-        public bool BoolValue
+        public bool Small 
         {
-            get { return boolValue; }
-            set { boolValue = value; }
+            get { return _small; }
+            set { _small = value; }
         }
 
         [DataMember]
         public string StringValue
         {
-            get { return stringValue; }
-            set { stringValue = value; }
+            get { return _stringValue; }
+            set { _stringValue = value; }
         }
     }
 }

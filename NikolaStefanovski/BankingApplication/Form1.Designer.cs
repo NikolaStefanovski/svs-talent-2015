@@ -106,6 +106,13 @@
             this.label55 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.btnMakeTransaction = new System.Windows.Forms.Button();
+            this.btnGetBalance = new System.Windows.Forms.Button();
+            this.txtAccountNum = new System.Windows.Forms.TextBox();
+            this.txtBalance = new System.Windows.Forms.TextBox();
+            this.chkSmall = new System.Windows.Forms.CheckBox();
+            this.btnMagic = new System.Windows.Forms.Button();
+            this.txtMagicStringInput = new System.Windows.Forms.TextBox();
+            this.txtMagicStringResult = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCreateTransactionAccount
@@ -781,11 +788,78 @@
             this.btnMakeTransaction.UseVisualStyleBackColor = true;
             this.btnMakeTransaction.Click += new System.EventHandler(this.btnMakeTransaction_Click);
             // 
+            // btnGetBalance
+            // 
+            this.btnGetBalance.Location = new System.Drawing.Point(12, 449);
+            this.btnGetBalance.Name = "btnGetBalance";
+            this.btnGetBalance.Size = new System.Drawing.Size(249, 23);
+            this.btnGetBalance.TabIndex = 80;
+            this.btnGetBalance.Text = "Get Account Balance";
+            this.btnGetBalance.UseVisualStyleBackColor = true;
+            this.btnGetBalance.Click += new System.EventHandler(this.btnGetBalance_Click);
+            // 
+            // txtAccountNum
+            // 
+            this.txtAccountNum.Location = new System.Drawing.Point(365, 451);
+            this.txtAccountNum.Name = "txtAccountNum";
+            this.txtAccountNum.Size = new System.Drawing.Size(145, 20);
+            this.txtAccountNum.TabIndex = 81;
+            // 
+            // txtBalance
+            // 
+            this.txtBalance.Location = new System.Drawing.Point(627, 451);
+            this.txtBalance.Name = "txtBalance";
+            this.txtBalance.ReadOnly = true;
+            this.txtBalance.Size = new System.Drawing.Size(145, 20);
+            this.txtBalance.TabIndex = 82;
+            // 
+            // chkSmall
+            // 
+            this.chkSmall.AutoSize = true;
+            this.chkSmall.Location = new System.Drawing.Point(516, 479);
+            this.chkSmall.Name = "chkSmall";
+            this.chkSmall.Size = new System.Drawing.Size(57, 17);
+            this.chkSmall.TabIndex = 83;
+            this.chkSmall.Text = "Small?";
+            this.chkSmall.UseVisualStyleBackColor = true;
+            // 
+            // btnMagic
+            // 
+            this.btnMagic.Location = new System.Drawing.Point(12, 478);
+            this.btnMagic.Name = "btnMagic";
+            this.btnMagic.Size = new System.Drawing.Size(249, 23);
+            this.btnMagic.TabIndex = 84;
+            this.btnMagic.Text = "Do magic to string";
+            this.btnMagic.UseVisualStyleBackColor = true;
+            this.btnMagic.Click += new System.EventHandler(this.btnMagic_Click);
+            // 
+            // txtMagicStringInput
+            // 
+            this.txtMagicStringInput.Location = new System.Drawing.Point(365, 477);
+            this.txtMagicStringInput.Name = "txtMagicStringInput";
+            this.txtMagicStringInput.Size = new System.Drawing.Size(145, 20);
+            this.txtMagicStringInput.TabIndex = 85;
+            // 
+            // txtMagicStringResult
+            // 
+            this.txtMagicStringResult.Location = new System.Drawing.Point(627, 477);
+            this.txtMagicStringResult.Name = "txtMagicStringResult";
+            this.txtMagicStringResult.ReadOnly = true;
+            this.txtMagicStringResult.Size = new System.Drawing.Size(145, 20);
+            this.txtMagicStringResult.TabIndex = 86;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 441);
+            this.ClientSize = new System.Drawing.Size(847, 502);
+            this.Controls.Add(this.txtMagicStringResult);
+            this.Controls.Add(this.txtMagicStringInput);
+            this.Controls.Add(this.btnMagic);
+            this.Controls.Add(this.chkSmall);
+            this.Controls.Add(this.txtBalance);
+            this.Controls.Add(this.txtAccountNum);
+            this.Controls.Add(this.btnGetBalance);
             this.Controls.Add(this.btnMakeTransaction);
             this.Controls.Add(this.lblEndDateTo);
             this.Controls.Add(this.lblStartDateTo);
@@ -951,6 +1025,13 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Button btnMakeTransaction;
+        private System.Windows.Forms.Button btnGetBalance;
+        private System.Windows.Forms.TextBox txtAccountNum;
+        private System.Windows.Forms.TextBox txtBalance;
+        private System.Windows.Forms.CheckBox chkSmall;
+        private System.Windows.Forms.Button btnMagic;
+        private System.Windows.Forms.TextBox txtMagicStringInput;
+        private System.Windows.Forms.TextBox txtMagicStringResult;
     }
 }
 

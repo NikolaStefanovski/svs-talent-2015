@@ -32,17 +32,11 @@
       <xsd:import schemaLocation="http://localhost:53423/MyService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MyWCFService" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IMyService_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
+  <wsdl:message name="IMyService_DoSomeMagicToString_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoSomeMagicToString" />
   </wsdl:message>
-  <wsdl:message name="IMyService_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
-  </wsdl:message>
-  <wsdl:message name="IMyService_GetDataUsingDataContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
-  </wsdl:message>
-  <wsdl:message name="IMyService_GetDataUsingDataContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  <wsdl:message name="IMyService_DoSomeMagicToString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoSomeMagicToStringResponse" />
   </wsdl:message>
   <wsdl:message name="IMyService_GetAccountBalance_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAccountBalance" />
@@ -51,13 +45,9 @@
     <wsdl:part name="parameters" element="tns:GetAccountBalanceResponse" />
   </wsdl:message>
   <wsdl:portType name="IMyService">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/GetData" message="tns:IMyService_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/GetDataResponse" message="tns:IMyService_GetData_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/GetDataUsingDataContract" message="tns:IMyService_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/GetDataUsingDataContractResponse" message="tns:IMyService_GetDataUsingDataContract_OutputMessage" />
+    <wsdl:operation name="DoSomeMagicToString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/DoSomeMagicToString" message="tns:IMyService_DoSomeMagicToString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/DoSomeMagicToStringResponse" message="tns:IMyService_DoSomeMagicToString_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAccountBalance">
       <wsdl:input wsaw:Action="http://tempuri.org/IMyService/GetAccountBalance" message="tns:IMyService_GetAccountBalance_InputMessage" />
@@ -66,17 +56,8 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMyService" type="tns:IMyService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/IMyService/GetData" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/IMyService/GetDataUsingDataContract" style="document" />
+    <wsdl:operation name="DoSomeMagicToString">
+      <soap:operation soapAction="http://tempuri.org/IMyService/DoSomeMagicToString" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -97,17 +78,8 @@
   <wsdl:binding name="BasicHttpsBinding_IMyService" type="tns:IMyService">
     <wsp:PolicyReference URI="#BasicHttpsBinding_IMyService_policy" />
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/IMyService/GetData" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/IMyService/GetDataUsingDataContract" style="document" />
+    <wsdl:operation name="DoSomeMagicToString">
+      <soap:operation soapAction="http://tempuri.org/IMyService/DoSomeMagicToString" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
