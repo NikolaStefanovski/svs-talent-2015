@@ -199,7 +199,7 @@ namespace BankingApplication
 
         private void btnGetBalance_Click(object sender, EventArgs e)
         {
-            MyServiceClient service = new MyServiceClient();
+            MyServiceClient service = new MyServiceClient("BasicHttpBinding_IMyService");
 
             txtBalance.Text = service.GetAccountBalance(new TransactionAccount("euro", 10000));
         }
@@ -210,7 +210,7 @@ namespace BankingApplication
             s.Small = chkSmall.Checked;
             s.StringValue = txtMagicStringInput.Text;
 
-            MyServiceClient client = new MyServiceClient();
+            MyServiceClient client = new MyServiceClient("BasicHttpBinding_IMyService");
 
             txtMagicStringResult.Text = client.DoSomeMagicToString(s).StringValue;         
         }
