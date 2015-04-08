@@ -790,6 +790,7 @@
             // 
             // btnGetBalance
             // 
+            this.btnGetBalance.Enabled = false;
             this.btnGetBalance.Location = new System.Drawing.Point(12, 449);
             this.btnGetBalance.Name = "btnGetBalance";
             this.btnGetBalance.Size = new System.Drawing.Size(249, 23);
