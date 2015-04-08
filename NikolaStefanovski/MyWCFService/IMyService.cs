@@ -1,4 +1,5 @@
-﻿using BankingClassLibrary.Interfaces;
+﻿using BankingClassLibrary.Account;
+using BankingClassLibrary.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace MyWCFService
         StringMagic DoSomeMagicToString(StringMagic sBuilder);
 
         [OperationContract]
-        string GetAccountBalance(IAccount account);
+        string GetAccountBalance(AccountService account);
     }
 
 
@@ -45,6 +46,19 @@ namespace MyWCFService
         {
             get { return _stringValue; }
             set { _stringValue = value; }
+        }
+    }
+
+    [DataContract]
+    public class AccountService
+    {
+        Account _account;
+
+        [DataMember]
+        public Account TheAccount 
+        {
+            get { return _account; }
+            set { _account = value; }
         }
     }
 }

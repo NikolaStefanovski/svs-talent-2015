@@ -11,7 +11,7 @@ using BankingClassLibrary.Common;
 using BankingClassLibrary.Account;
 using BankingClassLibrary.Interfaces;
 using BankingClassLibrary.Processors;
-using BankingApplication.MyService;
+//using BankingApplication.MyService;
 
 namespace BankingApplication
 {
@@ -199,20 +199,20 @@ namespace BankingApplication
 
         private void btnGetBalance_Click(object sender, EventArgs e)
         {
-            MyServiceClient service = new MyServiceClient("BasicHttpBinding_IMyService");
+            //MyServiceClient service = new MyServiceClient("BasicHttpBinding_IMyService");
 
-            txtBalance.Text = service.GetAccountBalance(new TransactionAccount("euro", 10000));
+            //txtBalance.Text = service.GetAccountBalance(new TransactionAccount("euro", 10000));
         }
 
         private void btnMagic_Click(object sender, EventArgs e)
         {
-            StringMagic s = new StringMagic();
-            s.Small = chkSmall.Checked;
-            s.StringValue = txtMagicStringInput.Text;
+            //StringMagic s = new StringMagic();
+            //s.Small = chkSmall.Checked;
+            //s.StringValue = txtMagicStringInput.Text;
 
-            MyServiceClient client = new MyServiceClient("BasicHttpBinding_IMyService");
+           // MyServiceClient client = new MyServiceClient("BasicHttpBinding_IMyService");
 
-            txtMagicStringResult.Text = client.DoSomeMagicToString(s).StringValue;         
+            //txtMagicStringResult.Text = client.DoSomeMagicToString(s).StringValue;         
         }
     }
 }

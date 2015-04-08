@@ -17,4 +17,3 @@ C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingClassLibra
 C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingClassLibrary\obj\Debug\BankingClassLibrary.pdb
 C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingClassLibrary\bin\Debug\BankingClassLibrary.dll
 C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingClassLibrary\bin\Debug\BankingClassLibrary.pdb
-C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingClassLibrary\obj\Debug\BankingClassLibrary.csprojResolveAssemblyReference.cache
