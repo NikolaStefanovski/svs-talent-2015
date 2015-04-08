@@ -14,39 +14,9 @@ namespace MyWCFService
     [ServiceContract]
     public interface IMyService
     {
-        /// <summary>
-        /// Makes big letters small!
-        /// </summary>
-        /// <param name="sBuilder"></param>
-        /// <returns></returns>
-        [OperationContract]
-        StringMagic DoSomeMagicToString(StringMagic sBuilder);
 
         [OperationContract]
-        string GetAccountBalance(AccountService account);
-    }
-
-
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    [DataContract]
-    public class StringMagic
-    {
-        bool _small = true;
-        string _stringValue = "";
-
-        [DataMember]
-        public bool Small 
-        {
-            get { return _small; }
-            set { _small = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return _stringValue; }
-            set { _stringValue = value; }
-        }
+        AccountService GetAccountBalance(AccountService account);
     }
 
     [DataContract]
