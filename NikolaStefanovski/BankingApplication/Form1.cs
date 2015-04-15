@@ -13,6 +13,7 @@ using BankingClassLibrary.Interfaces;
 using BankingClassLibrary.Processors;
 using BankingApplication.MyService;
 using BankingClassLibrary.Accounts;
+using System.Collections;
 
 namespace BankingApplication
 {
@@ -37,11 +38,7 @@ namespace BankingApplication
         /// <param name="e"></param>
         private void btnCreateTransactionAccount_Click(object sender, EventArgs e)
         {
-            decimal limit = decimal.Parse(txtLimit.Text);
-            TransactionAccount ta = new TransactionAccount(txtCurrency.Text, limit);
-            CurrencyAmount balance = ta.Balance;
-            balance.Amount = 300000;
-            ta.CreditAmount(balance);
+            TransactionAccount ta = CreateTransactionAccount();
             populateAccountCommonDetails(ta);
             populateTransactionDetails(ta);
         }
@@ -52,6 +49,13 @@ namespace BankingApplication
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnCreateDepositAccount_Click(object sender, EventArgs e)
+        {
+            DepositAccount da = CreateDepositAccount();
+            populateAccountCommonDetails(da);
+            populateDepositDetails(da);
+        }
+
+        private DepositAccount CreateDepositAccount()
         {
             TimePeriod tp;
             tp.Period = int.Parse(txtPeriodAmount.Text);
@@ -66,12 +70,37 @@ namespace BankingApplication
             CurrencyAmount balance = da.Balance;
             balance.Amount = 50000;
             da.CreditAmount(balance);
-            populateAccountCommonDetails(da);
-            populateDepositDetails(da);
+
+            return da;
         }
 
-        private void CreateLoanAccount() {
+        private TransactionAccount CreateTransactionAccount()
+        {
+            decimal limit = decimal.Parse(txtLimit.Text);
+            TransactionAccount ta = new TransactionAccount(txtCurrency.Text, limit);
+            CurrencyAmount balance = ta.Balance;
+            balance.Amount = 300000;
+            ta.CreditAmount(balance);
 
+            return ta;
+        }
+
+        private LoanAccount CreateLoanAccount() {
+            TimePeriod tp;
+            tp.Period = int.Parse(txtPeriodAmount.Text);
+            tp.Unit = parseStringToUoT(txtPeriodUnit.Text);
+            InterestRate ir;
+            ir.Percent = decimal.Parse(txtPercent.Text);
+            ir.Unit = parseStringToUoT(txtInterestUnit.Text);
+            DateTime start = dtpStartDate.Value;
+            DateTime end = dtpEndDate.Value;
+
+            LoanAccount da = new LoanAccount(txtCurrency.Text, tp, ir, start, end, null);
+            CurrencyAmount balance = da.Balance;
+            balance.Amount = 50000;
+            da.CreditAmount(balance);
+
+            return da;
         }
         #endregion
 
@@ -162,44 +191,78 @@ namespace BankingApplication
         /// <param name="e"></param>
         private void btnMakeTransaction_Click(object sender, EventArgs e)
         {
-            long idFrom = long.Parse(lblId.Text);
-            string numberFrom = lblNumber.Text;
-            decimal currencyFrom = decimal.Parse(lblLimit.Text);
-            ITransactionAccount ta = new TransactionAccount(lblCurrency.Text, currencyFrom);
-            CurrencyAmount balanceFrom = ta.Balance;
-            balanceFrom.Amount = decimal.Parse(lblBalance.Text);
-            ta.CreditAmount(balanceFrom);
+            bool _errorOccurred = false;
+            string _errorMsg = null;
 
-            //long idTo;
+            try
+            {
+                long idFrom = long.Parse(lblId.Text);
+                string numberFrom = lblNumber.Text;
+                decimal currencyFrom = decimal.Parse(lblLimit.Text);
+                ITransactionAccount ta = new TransactionAccount(lblCurrency.Text, currencyFrom);
+                CurrencyAmount balanceFrom = ta.Balance;
+                balanceFrom.Amount = decimal.Parse(lblBalance.Text);
+                ta.CreditAmount(balanceFrom);
 
-            TimePeriod tp;
-            tp.Period = int.Parse(lblPeriodTo.Text);
-            tp.Unit = parseStringToUoT(lblPeriodUnitTo.Text);
-            InterestRate ir;
-            ir.Percent = decimal.Parse(lblPercentTo.Text);
-            ir.Unit = parseStringToUoT(lblInterestUnitTo.Text);
-            string start = lblStartDateTo.Text;
-            string end = lblEndDateTo.Text;
-            IDepositAccount da = new DepositAccount(lblCurrencyTo.Text, tp, ir, DateTime.Parse(start), DateTime.Parse(end), null);
-            CurrencyAmount balanceTo = da.Balance;
-            balanceFrom.Amount = decimal.Parse(lblBalanceTo.Text);
-            da.CreditAmount(balanceTo);
+                //long idTo;
+
+                TimePeriod tp;
+                tp.Period = int.Parse(lblPeriodTo.Text);
+                tp.Unit = parseStringToUoT(lblPeriodUnitTo.Text);
+                InterestRate ir;
+                ir.Percent = decimal.Parse(lblPercentTo.Text);
+                ir.Unit = parseStringToUoT(lblInterestUnitTo.Text);
+                string start = lblStartDateTo.Text;
+                string end = lblEndDateTo.Text;
+                IDepositAccount da = new DepositAccount(lblCurrencyTo.Text, tp, ir, DateTime.Parse(start), DateTime.Parse(end), null);
+                CurrencyAmount balanceTo = da.Balance;
+                balanceFrom.Amount = decimal.Parse(lblBalanceTo.Text);
+                da.CreditAmount(balanceTo);
 
 
-            CurrencyAmount transferMoney;
-            transferMoney.Currency = "MKD";
-            transferMoney.Amount = 300000;
+                CurrencyAmount transferMoney;
+                transferMoney.Currency = "MKD";
+                transferMoney.Amount = 300000;
 
-            processor = TransactionProcessor.GetTransactionProcessor();
+                processor = TransactionProcessor.GetTransactionProcessor();
 
-            processor.ProcessTransaction(TransactionType.Transfer, ta, da, transferMoney);
+                processor.ProcessTransaction(TransactionType.Transfer, ta, da, transferMoney);
 
-            populateAccountCommonDetails(ta);
-            populateAccountCommonDetails(da);
-            populateTransactionDetails(ta);
-            populateDepositDetails(da);
+                populateAccountCommonDetails(ta);
+                populateAccountCommonDetails(da);
+                populateTransactionDetails(ta);
+                populateDepositDetails(da);
+
+                
+            }
+            catch (CurrencyMismatchException ex)
+            {
+                _errorOccurred = true;
+                _errorMsg = ex.Message;
+            }
+            catch (ApplicationException)
+            {
+                throw;
+            }
+            finally
+            {
+                if(_errorOccurred) MessageBox.Show(_errorMsg);
+            }
+
+            
         }
-        #endregion
+        
+
+        private Dictionary<CreateAccountType, IAccount> CreateAccounts(CreateAccountType accountTypesToCreate, ITransactionAccount transactionAccount)
+        {
+            Dictionary<CreateAccountType, IAccount> result = new Dictionary<CreateAccountType, IAccount>();
+
+            if (accountTypesToCreate.HasFlag(CreateAccountType.DepositAccount)) result.Add(CreateAccountType.DepositAccount, CreateDepositAccount());
+            if (accountTypesToCreate.HasFlag(CreateAccountType.TransactionAccount)) result.Add(CreateAccountType.TransactionAccount, CreateTransactionAccount());
+            if (accountTypesToCreate.HasFlag(CreateAccountType.LoanAccount)) result.Add(CreateAccountType.LoanAccount, CreateLoanAccount());
+
+            return result;
+        } 
 
         private void btnGetBalance_Click(object sender, EventArgs e)
         {
@@ -221,6 +284,7 @@ namespace BankingApplication
 
         private void btnMakeGroupTransaction_Click(object sender, EventArgs e)
         {
+            /*
             IAccount[] accounts = new IAccount[2];
 
             TimePeriod tr;
@@ -232,13 +296,22 @@ namespace BankingApplication
 
             accounts[0] = new DepositAccount("mkd", tr, ir, DateTime.Now, DateTime.Now, null);
             accounts[1] = new LoanAccount("mkd", tr, ir, DateTime.Now, DateTime.Now, null);
+            */
+
 
             CurrencyAmount amount;
             amount.Currency = "mkd";
             amount.Amount = 1000;
+      
+            CreateAccountType types = CreateAccountType.DepositAccount;
+            types |= CreateAccountType.LoanAccount;
+
+            Dictionary<CreateAccountType, IAccount> accounts =  CreateAccounts(types, CreateTransactionAccount());
+            IAccount[] array = new Account[accounts.Count];
+            accounts.Values.CopyTo(array, 0);
 
             processor = TransactionProcessor.GetTransactionProcessor();
-            txtStatus.Text = processor.ProcessGroupTransaction(TransactionType.Debit, amount, accounts).ToString();
+            txtStatus.Text = processor.ProcessGroupTransaction(TransactionType.Debit, amount, array).ToString();
             lblCount.Text = processor.TransactionCount.ToString();
             
             lblType.Text = processor.LastTransaction.TransactionType.ToString();
@@ -254,5 +327,6 @@ namespace BankingApplication
             lblStatus2.Text = processor[index].Status.ToString();
             lblAmount2.Text = processor[index].Amount.Amount.ToString() + "   " + processor[index].Amount.Currency;
         }
+        #endregion
     }
 }

@@ -12,15 +12,16 @@ namespace BankingClassLibrary.Accounts
     /// <summary>
     /// Base type for defining a bank account, contains an account id, a transactaion account number, the currency type and the total balance.
     /// </summary>
+    [AccountMetadata]
     abstract public class Account : IAccount
     {
         #region Fields and properties
         protected long _id;
+        [FormatRestriction(FormatString="XXXX-XXXX-XXXX-XXXX", MaxLength=16)]
         protected string _number;
         protected string _currency;
         protected CurrencyAmount _balance;
-
-        protected event BalanceChanged OnBalanceChanged;
+        public event BalanceChanged OnBalanceChanged;
 
         /// <summary>
         /// ID number of the account
@@ -92,7 +93,7 @@ namespace BankingClassLibrary.Accounts
         /// <returns></returns>
         public virtual TransactionStatus DebitAmount(CurrencyAmount amount)
         {
-            if (!IsCurrencyAmountOK(amount)) return TransactionStatus.Failed;
+            if (!IsCurrencyAmountOK(amount)) throw new CurrencyMismatchException();
             _balance.Amount -= amount.Amount;
             return TransactionStatus.Completed;
         }
@@ -103,7 +104,7 @@ namespace BankingClassLibrary.Accounts
         /// <returns></returns>
         public virtual TransactionStatus CreditAmount(CurrencyAmount amount)
         {
-            if (!IsCurrencyAmountOK(amount)) return TransactionStatus.Failed;
+            if (!IsCurrencyAmountOK(amount)) throw new CurrencyMismatchException();
             _balance.Amount += amount.Amount;
             return TransactionStatus.Completed;
         }

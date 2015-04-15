@@ -13,6 +13,7 @@ namespace BankingClassLibrary.Accounts
     /// <summary>
     /// A class modeling a loan account, not inheritable (sealed).
     /// </summary>
+    [AccountMetadata]
     public sealed class LoanAccount : DepositAccount, ILoanAccount
     {
         /// <summary>

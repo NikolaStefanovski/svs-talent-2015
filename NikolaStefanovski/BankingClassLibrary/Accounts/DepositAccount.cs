@@ -9,6 +9,7 @@ using BankingClassLibrary.Helpers;
 
 namespace BankingClassLibrary.Accounts
 {
+    [AccountMetadata]
     public class DepositAccount : Account, BankingClassLibrary.Interfaces.IDepositAccount
     {
         #region Fields and properties
