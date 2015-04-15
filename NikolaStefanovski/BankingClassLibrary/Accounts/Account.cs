@@ -21,7 +21,7 @@ namespace BankingClassLibrary.Accounts
         protected string _number;
         protected string _currency;
         protected CurrencyAmount _balance;
-        public event BalanceChanged OnBalanceChanged;
+        public event EventHandler<BalanceChangedEventArguments> OnBalanceChanged;
 
         /// <summary>
         /// ID number of the account

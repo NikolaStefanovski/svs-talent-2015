@@ -6,7 +6,7 @@ namespace BankingClassLibrary.Common
 {
     public delegate void TransactionLogger(IAccount account, TransactionType type, CurrencyAmount amount);
 
-    public delegate void BalanceChanged(object sender, BalanceChangedEventArguments eventArgs);
+    //public delegate void BalanceChanged(object sender, BalanceChangedEventArguments eventArgs);
 
     public class BalanceChangedEventArguments : EventArgs
     {

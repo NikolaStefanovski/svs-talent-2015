@@ -100,6 +100,11 @@ namespace BankingClassLibrary.Processors
         #endregion 
 
         #region Public methods
+        public TransactionStatus ChargeProcessingFee(CurrencyAmount amount, IEnumerable<IAccount> accounts)
+        {
+            throw new NotImplementedException();
+        }
+
         public static TransactionProcessor GetTransactionProcessor() {
             return _instance;
         }

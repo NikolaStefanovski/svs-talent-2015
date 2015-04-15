@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BankingClassLibrary.Common;
-//using BankingClassLibrary.Account;
 using BankingClassLibrary.Interfaces;
 using BankingClassLibrary.Processors;
 using BankingApplication.MyService;
@@ -28,7 +27,7 @@ namespace BankingApplication
         public frmMain()
         {
             InitializeComponent();
-        } 
+        }
 
         #region Methods for creating instances of accounts.
         /// <summary>
@@ -68,10 +67,16 @@ namespace BankingApplication
 
             DepositAccount da = new DepositAccount(txtCurrency.Text, tp, ir, start, end, null);
             CurrencyAmount balance = da.Balance;
+            da.OnBalanceChanged += da_OnBalanceChanged;
             balance.Amount = 50000;
             da.CreditAmount(balance);
 
             return da;
+        }
+
+        void da_OnBalanceChanged(object sender, BalanceChangedEventArguments e)
+        {
+            throw new NotImplementedException();
         }
 
         private TransactionAccount CreateTransactionAccount()

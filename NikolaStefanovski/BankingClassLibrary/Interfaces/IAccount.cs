@@ -10,6 +10,6 @@ namespace BankingClassLibrary.Interfaces
         BankingClassLibrary.Common.TransactionStatus DebitAmount(BankingClassLibrary.Common.CurrencyAmount amount);
         long ID { get; }
         string Number { get; }
-        event BalanceChanged OnBalanceChanged;
+        event EventHandler<BalanceChangedEventArguments> OnBalanceChanged;
     }
 }
