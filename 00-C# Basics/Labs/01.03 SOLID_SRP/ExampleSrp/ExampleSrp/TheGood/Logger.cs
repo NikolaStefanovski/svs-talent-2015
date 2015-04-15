@@ -36,7 +36,12 @@ namespace ExampleSrp.TheGood
         /// <param name="statechangeinfo"></param>
         public void ComputerLogStateChanged(object sender, string stateChangedInfo)
         {
-            Console.WriteLine("==== SYSTEM ==== Car changed state:{0}", stateChangedInfo);
+            Console.WriteLine("==== SYSTEM ==== State changed: {0}", stateChangedInfo);
+        }
+
+        public void ComputerLogException(object sender, string exceptionMsg)
+        {
+            Console.WriteLine(exceptionMsg);
         }
     }
 }

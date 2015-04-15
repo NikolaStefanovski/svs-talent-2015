@@ -9,29 +9,22 @@ namespace ExampleSrp.TheGood
     public class AcmeDipCar
     {
         private ILogger _logger;
-        private string _logInfo;
+        //private string _logInfo;
 
         public event EventHandler<string> OnStateChanged;
         public event EventHandler<string> OnFailureToChangeState;
 
-        public string LogInfo
-        {
-            get { return _logInfo; }
-            set { _logInfo = value; }
-        }
-
         public LockState IsLocked { get; private set; }
 
-        public AcmeDipCar(string logInfo)
+        public AcmeDipCar(ILogger logger)
         {
-            _logger = Logger.Instance;
-            OnStateChanged += _logger.ComputerLogStateChanged;
-        }
-
-        void _logger_ComputerLogChangeState(object sender, string e)
-        {
-            throw new NotImplementedException();
-        }
+            _logger = logger;
+            if (_logger != null)
+            {
+                OnStateChanged += _logger.ComputerLogStateChanged;
+                OnFailureToChangeState += _logger.ComputerLogException;
+            }
+        }  
 
         public void Lock()
         {
@@ -50,8 +43,6 @@ namespace ExampleSrp.TheGood
 
         public void Unlock()
         {
-            _logger = Logger.Instance;
-
             try
             {
                 this.IsLocked = LockState.Unlocked;

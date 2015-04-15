@@ -12,5 +12,6 @@ namespace ExampleSrp.TheGood
     {
         void ComputerLogStateChanged(object sender, string args);
 
+        void ComputerLogException(object sender, string args);
     }
 }
