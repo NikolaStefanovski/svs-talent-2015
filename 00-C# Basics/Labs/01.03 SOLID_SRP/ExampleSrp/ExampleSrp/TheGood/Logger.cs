@@ -9,9 +9,10 @@ namespace ExampleSrp.TheGood
     /// <summary>
     /// Enables dispatching the log record of state change to various systems.
     /// </summary>
-    public class Logger
+    public class Logger : ILogger
     {
         private static Logger _instance;
+
         public static Logger Instance {
             get 
             {
@@ -30,21 +31,12 @@ namespace ExampleSrp.TheGood
         }
 
         /// <summary>
-        /// Dispatch the log record to a cloud system.
+        /// dispatch the log record to a cloud system.
         /// </summary>
-        /// <param name="stateChangeInfo"></param>
-        public static void ComputerLogChangeStateOnCloud(string stateChangeInfo)
+        /// <param name="statechangeinfo"></param>
+        public void ComputerLogStateChanged(object sender, string stateChangedInfo)
         {
-            Console.WriteLine("==== CLOUD ==== Car changed state:{0}", stateChangeInfo);
-        }
-
-        /// <summary>
-        /// Dispatch the log record to a smart phone.
-        /// </summary>
-        /// <param name="stateChangeInfo"></param>
-        public static void ComputerLogChangeStateOnPhone(string stateChangeInfo)
-        {
-            Console.WriteLine("==== PHONE ==== Car changed state:{0}", stateChangeInfo);
+            Console.WriteLine("==== CLOUD ==== Car changed state:{0}", stateChangedInfo);
         }
     }
 }
