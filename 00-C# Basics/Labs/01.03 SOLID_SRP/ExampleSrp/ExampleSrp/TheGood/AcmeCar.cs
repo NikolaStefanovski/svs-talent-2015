@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExampleSrp.TheBad
+namespace ExampleSrp.TheGood
 {
     public class AcmeCar
     {
@@ -17,12 +17,12 @@ namespace ExampleSrp.TheBad
                 //
                 this.IsLocked = LockState.Locked;
                 //log state change in computer
-                ComputerLogChangeState("CarLocked");
+                Logger.ComputerLogChangeStateOnCloud("Car locked!");
 
             }
             catch (Exception)
             {
-                Console.WriteLine("There was an error locking the car!");
+                Logger.ComputerLogChangeStateOnPhone("There was an error locking the car!");
             }
         }
 
@@ -33,20 +33,14 @@ namespace ExampleSrp.TheBad
                 //
                 this.IsLocked = LockState.Unlocked;
                 //
-                ComputerLogChangeState("CarUnlocked");
+                Logger.ComputerLogChangeStateOnCloud("Car unlocked!");
             }
             catch (Exception)
             {
-                Console.WriteLine("There was an error unlocking the car!");
+                Logger.ComputerLogChangeStateOnPhone("There was an error unlocking the car!");
             }
 
         }
-
-        private void ComputerLogChangeState(string stateChangeInfo)
-        {
-            Console.WriteLine("==============Car changed state:{0}", stateChangeInfo);
-        }
-
     }
 
     public enum LockState
