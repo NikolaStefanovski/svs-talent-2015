@@ -7,7 +7,7 @@ using ExampleIsp.TheBad;
 
 namespace ExampleIsp
 {
-    public class AcmeFactory:IFactory
+    public class AcmeFactory : IFactory
     {
         public int Shift { get; private set; }
 
