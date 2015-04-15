@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ExampleSrp.TheGood
 {
     /// <summary>
-    /// Enables dispatching the log record of state change to various systems.
+    /// Enables dispatching the log record of state change to various systems using methods matching the EventHandler<string> delegate signature.
     /// </summary>
     public class Logger : ILogger
     {
@@ -31,12 +31,12 @@ namespace ExampleSrp.TheGood
         }
 
         /// <summary>
-        /// dispatch the log record to a cloud system.
+        /// dispatch the log record to a computer system.
         /// </summary>
         /// <param name="statechangeinfo"></param>
         public void ComputerLogStateChanged(object sender, string stateChangedInfo)
         {
-            Console.WriteLine("==== CLOUD ==== Car changed state:{0}", stateChangedInfo);
+            Console.WriteLine("==== SYSTEM ==== Car changed state:{0}", stateChangedInfo);
         }
     }
 }

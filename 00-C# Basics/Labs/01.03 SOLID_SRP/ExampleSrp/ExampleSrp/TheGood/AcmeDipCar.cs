@@ -10,6 +10,7 @@ namespace ExampleSrp.TheGood
     {
         private ILogger _logger;
         private string _logInfo;
+
         public event EventHandler<string> OnStateChanged;
         public event EventHandler<string> OnFailureToChangeState;
 
@@ -39,9 +40,7 @@ namespace ExampleSrp.TheGood
                 this.IsLocked = LockState.Locked;
 
                 //log state change in computer
-                OnStateChanged(this, "Car locked!");
-              
-
+                OnStateChanged(this, "Car locked");
             }
             catch (Exception)
             {
