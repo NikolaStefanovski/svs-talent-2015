@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExampleOcp.TheGood
+namespace ExampleLsp.TheGood
 {
     public class Car : Vehicle
     {
