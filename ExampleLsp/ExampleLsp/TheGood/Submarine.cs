@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace ExampleOcp.TheGood
 {
-    public class FlyingVehicle : Vehicle
+    public class Submarine : Vehicle
     {
         public override void OperateVehicle()
         {
-            Console.WriteLine("Fly the vehicle!");
+            Console.WriteLine("Go underwater!");
+        }
+
+        public override void ParkVehicle()
+        {
+            throw new NotImplementedException("Cant park submarines!");
         }
     }
 }
