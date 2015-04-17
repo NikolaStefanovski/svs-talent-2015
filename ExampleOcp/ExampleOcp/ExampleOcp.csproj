@@ -41,8 +41,8 @@
   <ItemGroup>
     <Compile Include="TheBad\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TheGood\FlyingVehicle.cs" />
-    <Compile Include="TheGood\LandVehicle.cs" />
+    <Compile Include="TheGood\Plane.cs" />
+    <Compile Include="TheGood\Car.cs" />
     <Compile Include="TheGood\Submarine.cs" />
     <Compile Include="TheGood\Vehicle.cs" />
   </ItemGroup>

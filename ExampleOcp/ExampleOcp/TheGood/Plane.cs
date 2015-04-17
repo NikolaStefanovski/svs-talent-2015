@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ExampleOcp.TheGood
 {
-    public class Vehicle
+    public class Plane : Vehicle
     {
-        public virtual void OperateVehicle()
+        public override void OperateVehicle()
         {
-            Console.WriteLine("Operate the vehicle!");
+            Console.WriteLine("Fly the plane!");
         }
     }
 }

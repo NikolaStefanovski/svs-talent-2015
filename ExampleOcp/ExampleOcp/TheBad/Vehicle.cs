@@ -14,13 +14,13 @@ namespace ExampleOcp
         {
             switch (Enum.GetName(typeof(VehicleType), Type))
             {
-                case "Land": Console.WriteLine("Drive the vehicle!");
+                case "Car": Console.WriteLine("Drive the car!");
                     break;
-                case "Flying": Console.WriteLine("FLy the vehicle");
+                case "Plane": Console.WriteLine("FLy the plane!");
                     break;
-                case "Submarine": Console.WriteLine("Submerge the vehicle!");
+                case "Submarine": Console.WriteLine("Go underwater!");
                     break;
-                default: Console.WriteLine("Unknown vehicle!");
+                default: Console.WriteLine("Operate the vehicle!");
                     break;
             }
         }
@@ -28,6 +28,6 @@ namespace ExampleOcp
 
     enum VehicleType
     {
-        None, Land, Flying, Submarine
+        None, Car, Plane, Submarine
     }
 }

@@ -10,7 +10,7 @@ namespace ExampleOcp.TheGood
     {
         public override void OperateVehicle()
         {
-            Console.WriteLine("Submerge the vehicle!");
+            Console.WriteLine("Go underwater!");
         }
     }
 }
