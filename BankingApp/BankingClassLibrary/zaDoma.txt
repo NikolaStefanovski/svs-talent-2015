@@ -1,0 +1,1 @@
+﻿da se napravi WCF service, da prima parametar class i da vrakja class, so attributes
