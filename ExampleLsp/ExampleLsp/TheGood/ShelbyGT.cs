@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ExampleLsp.TheGood
 {
-    public class Submarine : Vehicle
+    public class ShelbyGT : Car
     {
         public override void OperateVehicle()
         {
-            Console.WriteLine("Go underwater!");
+            Console.WriteLine("Drive the Shelby GT!");
         }
 
-        public override void ParkVehicle()
+        public override void GetInfoForLater()
         {
-            throw new NotImplementedException("Cant park submarines!");
+            Console.WriteLine("Get info for Shelby GT!");
         }
     }
 }

@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace ExampleLsp.TheGood
 {
-    public class Car : Vehicle
+    public class Car : IOperate, IInform
     {
-        public override void OperateVehicle()
+        public virtual void OperateVehicle()
         {
-            Console.WriteLine("Drive the car!");
+            Console.WriteLine("Operate the vehicle!");
+        }
+
+        public virtual void GetInfoForLater()
+        {
+            Console.WriteLine("Get info for vehicle!");
         }
     }
 }

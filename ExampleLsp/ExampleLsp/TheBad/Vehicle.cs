@@ -13,9 +13,9 @@ namespace ExampleLsp.TheBad
             Console.WriteLine("Operate the vehicle!");
         }
 
-        public virtual void ParkVehicle()
+        public virtual void GetInfoForLater()
         {
-            Console.WriteLine("Parking the vehicle!");
+            Console.WriteLine("Get info!");
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using ExampleLsp.TheBad;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ExampleLsp.TheBad
 {
-    public class Car : Vehicle
+    public class MitsubishiLancer : Vehicle
     {
         public override void OperateVehicle()
         {
-            Console.WriteLine("Drive the car!");
+            Console.WriteLine("Drive the Lancer!");
         }
 
-        public override void ParkVehicle()
+        public override void GetInfoForLater()
         {
-            Console.WriteLine("Parking car in garage!");
+            Console.WriteLine("Get info for Lancer!");
         }
     }
 }

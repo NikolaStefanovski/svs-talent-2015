@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExampleLsp.TheBad
+namespace ExampleLsp.TheGood
 {
-    public class Plane : Vehicle
+    public class MitsubishiLancer : Car
     {
         public override void OperateVehicle()
         {
-            throw new NotImplementedException("Nicholas Cage can't fly a plane!");
+            Console.WriteLine("Drive the Lancer!");
         }
 
         public override void GetInfoForLater()
         {
-            Console.WriteLine("Get info for plane!");
+            Console.WriteLine("Get info for Lancer!");
         }
     }
 }

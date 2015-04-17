@@ -42,15 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TheBad\Car.cs" />
+    <Compile Include="TheBad\MitsubishiLancer.cs" />
+    <Compile Include="TheBad\ShelbyGT.cs" />
+    <Compile Include="TheBad\GoneInSixtySeconds.cs" />
     <Compile Include="TheBad\Plane.cs" />
-    <Compile Include="TheBad\Submarine.cs" />
     <Compile Include="TheBad\Vehicle.cs" />
     <Compile Include="TheGood\Car.cs" />
+    <Compile Include="TheGood\GoneInSixtySeconds.cs" />
+    <Compile Include="TheGood\IInform.cs" />
+    <Compile Include="TheGood\MitsubishiLancer.cs" />
     <Compile Include="TheGood\IOperate.cs" />
     <Compile Include="TheGood\Plane.cs" />
-    <Compile Include="TheGood\Submarine.cs" />
-    <Compile Include="TheGood\Vehicle.cs" />
+    <Compile Include="TheGood\ShelbyGT.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

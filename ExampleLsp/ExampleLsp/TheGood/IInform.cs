@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace ExampleLsp.TheGood
 {
-    public class Plane : IInform
+    public interface IInform
     {
-        public void GetInfoForLater()
-        {
-            Console.WriteLine("Get info for plane!");
-        }
+        void GetInfoForLater();
     }
 }
