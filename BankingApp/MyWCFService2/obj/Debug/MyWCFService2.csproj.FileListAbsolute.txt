@@ -1,0 +1,8 @@
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\MyWCFService2\bin\MyWCFService2.dll.config
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\MyWCFService2\bin\MyWCFService2.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\MyWCFService2\bin\MyWCFService2.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\MyWCFService2\bin\BankingClassLibrary.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\MyWCFService2\bin\BankingClassLibrary.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\MyWCFService2\obj\Debug\MyWCFService2.csprojResolveAssemblyReference.cache
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\MyWCFService2\obj\Debug\MyWCFService2.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\MyWCFService2\obj\Debug\MyWCFService2.pdb

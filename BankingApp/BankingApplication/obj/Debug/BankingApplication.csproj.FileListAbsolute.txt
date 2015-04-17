@@ -1,0 +1,63 @@
+C:\Users\student\Desktop\V_C#\Advanced oop - project\BankingApplication\BankingApplication\bin\Debug\BankingApplication.exe.config
+C:\Users\student\Desktop\V_C#\Advanced oop - project\BankingApplication\BankingApplication\bin\Debug\BankingApplication.exe
+C:\Users\student\Desktop\V_C#\Advanced oop - project\BankingApplication\BankingApplication\bin\Debug\BankingApplication.pdb
+C:\Users\student\Desktop\V_C#\Advanced oop - project\BankingApplication\BankingApplication\obj\Debug\BankingApplication.csprojResolveAssemblyReference.cache
+C:\Users\student\Desktop\V_C#\Advanced oop - project\BankingApplication\BankingApplication\obj\Debug\BankingApplication.Properties.Resources.resources
+C:\Users\student\Desktop\V_C#\Advanced oop - project\BankingApplication\BankingApplication\obj\Debug\BankingApplication.csproj.GenerateResource.Cache
+C:\Users\student\Desktop\V_C#\Advanced oop - project\BankingApplication\BankingApplication\obj\Debug\BankingApplication.exe
+C:\Users\student\Desktop\V_C#\Advanced oop - project\BankingApplication\BankingApplication\obj\Debug\BankingApplication.pdb
+D:\Seavus\zip\BankingApplication\bin\Debug\BankingApplication.exe.config
+D:\Seavus\zip\BankingApplication\obj\Debug\BankingApplication.exe
+D:\Seavus\zip\BankingApplication\obj\Debug\BankingApplication.pdb
+D:\Seavus\zip\BankingApplication\obj\Debug\BankingApplication.csprojResolveAssemblyReference.cache
+D:\Seavus\zip\BankingApplication\obj\Debug\BankingApplication.Properties.Resources.resources
+D:\Seavus\zip\BankingApplication\obj\Debug\BankingApplication.csproj.GenerateResource.Cache
+D:\Seavus\zip\BankingApplication\bin\Debug\BankingApplication.exe
+D:\Seavus\zip\BankingApplication\bin\Debug\BankingApplication.pdb
+D:\Seavus\zip\BankingApplication\bin\Debug\BankingClassLibrary.dll
+D:\Seavus\zip\BankingApplication\bin\Debug\BankingClassLibrary.pdb
+D:\Seavus\zip\BankingApplication\obj\Debug\BankingApplication.frmMain.resources
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.exe.config
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.exe
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.exe
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\bin\Debug\BankingClassLibrary.dll
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\bin\Debug\BankingClassLibrary.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.csprojResolveAssemblyReference.cache
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.frmMain.resources
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.Properties.Resources.resources
+C:\Users\student\Source\Repos\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.csproj.GenerateResource.Cache
+C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.exe.config
+C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.exe
+C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.exe
+C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\bin\Debug\BankingClassLibrary.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\bin\Debug\BankingClassLibrary.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.csprojResolveAssemblyReference.cache
+C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.frmMain.resources
+C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.Properties.Resources.resources
+C:\Users\PC\Documents\GitHub\svs-talent-2015\00-C# Basics\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.csproj.GenerateResource.Cache
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.exe.config
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.exe
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.exe
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingClassLibrary.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingClassLibrary.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.csprojResolveAssemblyReference.cache
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.frmMain.resources
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.Properties.Resources.resources
+C:\Users\PC\Documents\GitHub\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.csproj.GenerateResource.Cache
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.exe.config
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.exe
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.exe
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingApplication.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingClassLibrary.dll
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\bin\Debug\BankingClassLibrary.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.csprojResolveAssemblyReference.cache
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.frmMain.resources
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.Properties.Resources.resources
+C:\Users\student\Source\Repos\svs-talent-2015\NikolaStefanovski\BankingApplication\obj\Debug\BankingApplication.csproj.GenerateResource.Cache
