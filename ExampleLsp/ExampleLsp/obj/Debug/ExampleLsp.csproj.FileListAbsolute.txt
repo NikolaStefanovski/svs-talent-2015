@@ -1,0 +1,4 @@
+C:\Users\PC\Documents\GitHub\svs-talent-2015\ExampleLsp\ExampleLsp\bin\Debug\ExampleLsp.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\ExampleLsp\ExampleLsp\bin\Debug\ExampleLsp.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\ExampleLsp\ExampleLsp\obj\Debug\ExampleLsp.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\ExampleLsp\ExampleLsp\obj\Debug\ExampleLsp.pdb
