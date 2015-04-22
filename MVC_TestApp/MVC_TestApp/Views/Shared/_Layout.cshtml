@@ -1,0 +1,55 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+</head>
+<body>
+    <div class="nav-menu">
+        <ul>
+            <li>@Html.ActionLink("Home", "Index")</li>
+            <li>@Html.ActionLink("About", "About")</li>
+        </ul>
+    </div>
+    <div class="left-sidebar">
+        <table>
+            <thead>
+                <tr>
+                    <th>aaaaa</th>
+                    <th>aaaaa</th>
+                    <th>aaaaa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>aaaaa</td>
+                    <td>aaaaa</td>
+                    <td>aaaaa</td>
+                </tr>
+                <tr>
+                    <td>aaaaa</td>
+                    <td>aaaaa</td>
+                    <td>aaaaa</td>
+                </tr>
+                <tr>
+                    <td>aaaaa</td>
+                    <td>aaaaa</td>
+                    <td>aaaaa</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="content-body">
+        @RenderBody()
+    </div>
+    <footer class="footer" >
+        <h4>Made in China</h4>
+    </footer>
+</body>
+</html>

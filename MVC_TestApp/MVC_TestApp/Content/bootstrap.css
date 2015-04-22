@@ -1,0 +1,26 @@
+﻿.nav-menu {
+    width: 100%;
+    border: solid black;
+}
+
+.left-sidebar {
+    float: left;
+    border: double black;
+}
+
+.right-sidebar {
+    float: right;
+    border: dashed black;
+}
+
+.content-body {
+    margin: auto;
+    position: absolute;
+    background-color: burlywood;
+}
+
+.footer {
+    border-top: solid black;
+    align-content: center;
+    align-items: center;
+}
