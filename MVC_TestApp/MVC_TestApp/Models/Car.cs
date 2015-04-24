@@ -13,6 +13,7 @@ namespace MVC_TestApp.Models
         {
             get { return _number; }
             set { _number = value; }
+            
         }
 
         public Car(int number)
