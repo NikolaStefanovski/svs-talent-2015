@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{173D84D5-E811-42DC-814C-E230C87BF5E5}</ProjectGuid>
+    <ProjectGuid>{AA9DDB2B-0C7F-405D-97D5-E5A0803444F1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Registar.BusinessLayer</RootNamespace>
-    <AssemblyName>Registar.BusinessLayer</AssemblyName>
+    <RootNamespace>Registar.DomainModel</RootNamespace>
+    <AssemblyName>Registar.DomainModel</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,30 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandInvoker.cs" />
-    <Compile Include="Contracts\BikeSearchCommand.cs" />
-    <Compile Include="Contracts\BikeSearchResult.cs" />
-    <Compile Include="Contracts\_Command.cs" />
-    <Compile Include="Contracts\_CommandResult.cs" />
-    <Compile Include="Handlers\BikeSearchCommandHandler.cs" />
-    <Compile Include="Handlers\_CommandHandlerBase.cs" />
+    <Compile Include="Bike.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Registar.DataLayer\Registar.DataLayer.csproj">
-      <Project>{44768f6c-35d7-452b-a77f-dfc4554a2290}</Project>
-      <Name>Registar.DataLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Registar.DomainModel\Registar.DomainModel.csproj">
-      <Project>{aa9ddb2b-0c7f-405d-97d5-e5a0803444f1}</Project>
-      <Name>Registar.DomainModel</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,1 @@
+tabela, mvc, preview na podatoci vo view

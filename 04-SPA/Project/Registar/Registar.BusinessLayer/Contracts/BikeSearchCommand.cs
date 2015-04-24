@@ -8,5 +8,8 @@ namespace Registar.BusinessLayer.Contracts
 {
     public class BikeSearchCommand:Command
     {
+        public string Colour { get; set; }
+
+        public string Producer { get; set; }
     }
 }
