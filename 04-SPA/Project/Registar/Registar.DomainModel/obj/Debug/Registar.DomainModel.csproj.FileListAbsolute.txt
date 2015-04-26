@@ -7,3 +7,13 @@ C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.D
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.dll
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\Registar.DomainModel.dll.config
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\Registar.DomainModel.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\Registar.DomainModel.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.xml
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.csprojResolveAssemblyReference.cache
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DomainModel\obj\Debug\Registar.DomainModel.pdb
