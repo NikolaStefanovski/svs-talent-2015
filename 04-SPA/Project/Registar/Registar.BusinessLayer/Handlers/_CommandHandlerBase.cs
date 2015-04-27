@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Registar.BusinessLayer.Contracts;
+using System.Data.Entity;
 
 namespace Registar.BusinessLayer.Handlers
 {
@@ -32,7 +33,10 @@ namespace Registar.BusinessLayer.Handlers
 
     }
 
-    internal interface IHandler
+    /// <summary>
+    /// Abstraction for the operations with the data.
+    /// </summary>
+    public interface IHandler
     {
         CommandResult Execute(Command command);
     }

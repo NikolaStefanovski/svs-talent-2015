@@ -16,11 +16,33 @@ namespace Registar.Controllers
 
         public ActionResult Index()
         {
+            //get params from query string
+            string colour = this.Request.QueryString["colour"];
+            string model = this.Request.QueryString["model"];
+            string producer = this.Request.QueryString["producer"];
+
             //call BL
             BikeSearchCommand _command = new BikeSearchCommand();
-            BikeSearchResult _result = CommandInvoker.InvokeCommand<BikeSearchCommand, BikeSearchResult>(_command);
-            //
-            return View(_result);
+            _command.Colour = colour;
+            _command.Producer = producer;
+
+            BikeSearchResult _result = CommandInvoker.InvokeCommand<BikeSearchCommand, BikeSearchResult>(_command);          
+
+            List<BikeModel> result = new List<BikeModel>(_result.Result.Capacity);
+            BikeModel temp;
+
+            for (int i = 0; i < result.Capacity; ++i)
+            {
+                temp = new BikeModel();
+                temp.Model = _result.Result[i].Model;
+                temp.RegNumber = _result.Result[i].RegNumber;
+                temp.Producer = _result.Result[i].Producer;
+                temp.Colour = _result.Result[i].Colour;
+
+                result.Add(temp);
+            }
+
+                return View(result);
         }
 
         public ActionResult Index2()
@@ -34,7 +56,7 @@ namespace Registar.Controllers
             this.ViewBag.SomeNewProperty = "theValue";
             this.ViewData["SomeNewProperty"] = "theValue";
             //
-            return View("Index",_result);
+            return View("Index", _result);
         }
 
     }

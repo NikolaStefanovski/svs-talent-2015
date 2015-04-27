@@ -7,11 +7,19 @@
 @section HeaderScripts
 {
     <script type="text/javascript"></script>  
-    bla bla  
+    
 }
 @this.Html.Partial("_PartialView")
 
 <table style="float: left;">
+    <thead>
+        <tr>
+            <td>RegNumber</td>
+            <td>Producer</td>
+            <td>Model</td>
+            <td>Colour</td>
+        </tr>
+    </thead>
     <tbody>
         @foreach (var bike in this.Model)
         {
@@ -26,8 +34,8 @@
 </table>
 
 
-<form action="Index" method="get">
-    <table>
+<form action="public/Index" method="get">
+    <table style="float: right;">
         <tbody>
             <tr>
                 <td>Producer</td>

@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 using Registar.BusinessLayer.Contracts;
 using Registar.DataLayer;
 using Registar.DomainModel;
+using System.Data.Entity;
 
 namespace Registar.BusinessLayer.Handlers
 {
-    internal class BikeSearchCommandHandler:CommandHandlerBase<BikeSearchCommand,BikeSearchResult>
+    internal class BikeSearchCommandHandler : CommandHandlerBase<BikeSearchCommand, BikeSearchResult>
     {
+        
+
         protected override BikeSearchResult ExecuteCommand(BikeSearchCommand command)
         {
             using (RegistarDbContext context = new RegistarDbContext())
@@ -19,10 +22,11 @@ namespace Registar.BusinessLayer.Handlers
                 //bikes = context.Bikes
                 //        .OrderBy(p => p.BikeId)
                 //        .Take(10);
-                        //.ToList();
+                //.ToList();
 
-                var query = from b in context.Bikes.Include("BikeHistory")
+                var query = from b in context.Bikes
                             select b;
+
                 if (!string.IsNullOrEmpty(command.Colour))
                 {
                     query = query.Where(x => x.Colour == command.Colour);
@@ -34,7 +38,7 @@ namespace Registar.BusinessLayer.Handlers
 
                 query = query
                         .OrderBy(x => x.BikeId)
-                        .Skip(command.PageIndex*command.PageSize)
+                        .Skip(command.PageIndex * command.PageSize)
                         .Take(command.PageSize);
                 //
 
@@ -42,7 +46,7 @@ namespace Registar.BusinessLayer.Handlers
                 result.Result = query.ToList();
                 return result;
             }
-            
+
         }
     }
 }

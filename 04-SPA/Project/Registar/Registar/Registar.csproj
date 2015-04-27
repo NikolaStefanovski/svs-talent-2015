@@ -161,6 +161,10 @@
       <Project>{173d84d5-e811-42dc-814c-e230c87bf5e5}</Project>
       <Name>Registar.BusinessLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Registar.DomainModel\Registar.DomainModel.csproj">
+      <Project>{73bb7875-ce89-4c1f-85a7-9168ad4970dc}</Project>
+      <Name>Registar.DomainModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
