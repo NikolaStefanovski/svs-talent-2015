@@ -5,15 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using Registar.BusinessLayer.Contracts;
 using System.Data.Entity;
+using Registar.DataLayer;
 
 namespace Registar.BusinessLayer.Handlers
 {
     /// <summary>
     /// Abstract class for all command handlers
     /// </summary>
-    internal abstract class CommandHandlerBase<TRequest,TResult>:IHandler where TRequest:Command
-                                                                 where TResult:CommandResult
+    internal abstract class CommandHandlerBase<TRequest,TResult> : IHandler where TRequest:Command
+                                                                            where TResult:CommandResult
     {
+        public AbstractDbContext Context { get; set; }
+               
+        public CommandHandlerBase(AbstractDbContext context)
+        {
+            this.Context = context;
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -38,6 +46,8 @@ namespace Registar.BusinessLayer.Handlers
     /// </summary>
     public interface IHandler
     {
+        AbstractDbContext Context { get; set; }
+
         CommandResult Execute(Command command);
     }
 }

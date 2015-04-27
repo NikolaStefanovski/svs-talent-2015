@@ -12,11 +12,14 @@ namespace Registar.BusinessLayer.Handlers
 {
     internal class BikeSearchCommandHandler : CommandHandlerBase<BikeSearchCommand, BikeSearchResult>
     {
-        
+        public BikeSearchCommandHandler(AbstractDbContext context) : base(context)
+        {
+ 
+        }
 
         protected override BikeSearchResult ExecuteCommand(BikeSearchCommand command)
         {
-            using (RegistarDbContext context = new RegistarDbContext())
+            using (this.Context = new RegistarDbContext())
             {
                 //IEnumerable<Bike> bikes = new List<Bike>();
                 //bikes = context.Bikes
@@ -24,7 +27,7 @@ namespace Registar.BusinessLayer.Handlers
                 //        .Take(10);
                 //.ToList();
 
-                var query = from b in context.Bikes
+                var query = from b in Context.Bikes
                             select b;
 
                 if (!string.IsNullOrEmpty(command.Colour))

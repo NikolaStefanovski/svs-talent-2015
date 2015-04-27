@@ -9,11 +9,9 @@ using Registar.DomainModel;
 
 namespace Registar.DataLayer
 {
-    public class RegistarDbContext : DbContext
+    public class RegistarDbContext : AbstractDbContext
     {
-        public DbSet<Bike> Bikes { get; set; }
-
-        public RegistarDbContext() : base()
+        public RegistarDbContext() : base("RegistarDb")
         {
             this.Bikes = this.Set<Bike>();
         }
