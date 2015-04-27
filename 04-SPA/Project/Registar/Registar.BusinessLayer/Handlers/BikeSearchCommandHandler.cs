@@ -12,10 +12,7 @@ namespace Registar.BusinessLayer.Handlers
 {
     internal class BikeSearchCommandHandler : CommandHandlerBase<BikeSearchCommand, BikeSearchResult>
     {
-        public BikeSearchCommandHandler(AbstractDbContext context) : base(context)
-        {
- 
-        }
+       
 
         protected override BikeSearchResult ExecuteCommand(BikeSearchCommand command)
         {
