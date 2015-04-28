@@ -13,8 +13,8 @@ namespace Registar.BusinessLayer.Handlers
     /// <summary>
     /// Abstract class for all command handlers
     /// </summary>
-    internal abstract class CommandHandlerBase<TRequest,TResult> : IHandler where TRequest:Command
-                                                                            where TResult:CommandResult
+    public abstract class CommandHandlerBase<TRequest,TResult> : IHandler where TRequest:Command
+                                                                          where TResult:CommandResult
     {
         public IContext Context { get; set; }
 

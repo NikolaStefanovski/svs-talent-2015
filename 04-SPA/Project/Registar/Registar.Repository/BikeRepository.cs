@@ -17,9 +17,23 @@ namespace Registar.Repository
             using (var context = DataContextManager.CreateContext<IRegistarContext>())
             {
 				//LoggingManager
-				var query = from f in context.Bikes select f;
-				return query.ToList();
-                //return context.Bikes.ToList();
+
+
+				//var query = from f in context.Bikes select f;
+				//return query.ToList();
+
+				var result = context.Bikes;
+
+				if (paramaters["colour"] != null)
+                {
+                    result.Where(x => x.Colour == paramaters["colour"]);
+                }
+                if (paramaters["producer"] != null)
+                {
+                    result.Where(x => x.Producer == paramaters["produce"]);
+                }
+
+                return result.ToList();
             }
         }
     }

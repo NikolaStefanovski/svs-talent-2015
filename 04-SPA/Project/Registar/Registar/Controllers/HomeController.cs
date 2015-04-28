@@ -40,7 +40,7 @@ namespace Registar.Controllers
                 result.Add(temp);
             }
 
-                return View(result);
+            return View(result);
         }
 
         public ActionResult Index2()

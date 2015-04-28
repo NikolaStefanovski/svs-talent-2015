@@ -28,7 +28,7 @@ namespace Registar.DomainModel
         //public object IgnoreMe { get; set; }
 
         //[Timestamp]
-        //public byte[] TimeStamp { get; set; }
+        //public byte[] TStamp { get; set; }
 
         //[NotMapped]
         //public IEnumerable<BikeHistory> History { get; set; } 
