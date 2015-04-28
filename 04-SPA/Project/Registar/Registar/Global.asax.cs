@@ -32,6 +32,7 @@ namespace Registar
             RepositoryManager.RegisterFactory(new RepositoryFactory());
             DataContextManager.RegisterFactory(new DataContextFactory());
             MapperManager.RegisterMapper(new DefaultMapper());
+			LoggingManager.RegisterLogger(new ConsoleLogger());
         }
     }
 }

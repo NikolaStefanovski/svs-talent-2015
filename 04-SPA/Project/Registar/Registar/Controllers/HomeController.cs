@@ -7,6 +7,7 @@ using Registar.BusinessLayer;
 using Registar.BusinessLayer.Contracts;
 using Registar.Models;
 using Registar.Mappers;
+using Registar.DomainModel;
 
 namespace Registar.Controllers
 {
@@ -32,10 +33,10 @@ namespace Registar.Controllers
             List<BikeModel> result = new List<BikeModel>(_result.Result.Capacity);
             BikeModel temp;
 
-            MapperManager.CreateMap<BikeModel, BikeModel>();
-            for (int i = 0; i < result.Capacity; ++i)
+            MapperManager.CreateMap<Bike, BikeModel>();
+            for (int i = 0; i < _result.Result.Count; ++i)
             {
-                temp = MapperManager.GetModel<BikeModel>(result[i]);
+                temp = MapperManager.GetModel<Bike, BikeModel>(_result.Result[i]);
                 result.Add(temp);
             }
 

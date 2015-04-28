@@ -13,11 +13,11 @@ namespace Registar.DataLayer
     {
         public BikeConfiguration()
         {
-            this.ToTable("Bikes", "Data")
+            this.ToTable("Bikes", "data")
                 .HasKey(p => p.BikeId);
 
             this.Property(p => p.BikeId)
-                .HasColumnName("Id");
+                .HasColumnName("BikeId");
 
             //this.Ignore(p => p.IgnoreMe);
         }

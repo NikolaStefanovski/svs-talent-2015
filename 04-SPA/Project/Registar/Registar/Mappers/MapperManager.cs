@@ -20,9 +20,9 @@ namespace Registar.Mappers
             Mapper.CreateMap<TSource, TDestination>();
         }
 
-        public static TDestination GetModel<TDestination>(object source)
+        public static TDestination GetModel<TSource, TDestination>(TSource source)
         {
-            return Mapper.getMappedModel<TDestination>(source);
+            return Mapper.getMappedModel<TSource, TDestination>(source);
         }
     }
 }

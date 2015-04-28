@@ -16,7 +16,7 @@ namespace Registar.Mappers
         }
 
 
-        public TDestination getMappedModel<TDestination>(object source)
+        public TDestination getMappedModel<TSource, TDestination>(TSource source)
         {
             return AutoMapper.Mapper.Map<TDestination>(source);
         }

@@ -9,11 +9,16 @@ namespace Registar.Common
 {
     public class LoggingManager
     {
-        ILogger Logger { get; set; }
+        static ILogger Logger { get; set; }
 
-        public void LogWarning(string msg)
+		public static void LogWarning(string msg)
         {
             Logger.LogWarning(msg);
         }
+
+		public static void RegisterLogger(ILogger logger)
+		{
+			Logger = logger;
+		}
     }
 }

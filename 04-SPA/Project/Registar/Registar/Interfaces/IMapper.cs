@@ -10,6 +10,6 @@ namespace Registar.Interfaces
     {
         void CreateMap<TDestination, TSource>();
 
-        TDestination getMappedModel<TDestination>(object source);
+        TDestination getMappedModel<TSource, TDestination>(TSource source);
     }
 }

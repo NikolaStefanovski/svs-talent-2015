@@ -13,7 +13,7 @@ namespace Registar.DomainModel
     /// </summary>
     public class Bike
     {
-        //[Key]
+        [Key]
         public int BikeId { get; set; }
 
         public string RegNumber { get; set; }
@@ -24,15 +24,14 @@ namespace Registar.DomainModel
 
         public string Colour { get; set; }
 
-        [NotMapped]
-        public object IgnoreMe { get; set; }
+        //[NotMapped]
+        //public object IgnoreMe { get; set; }
 
-        [NotMapped]
-        [Timestamp]
-        public byte[] TimeStamp { get; set; }
+        //[Timestamp]
+        //public byte[] TimeStamp { get; set; }
 
-        
-        public IEnumerable<BikeHistory> History { get; set; } 
+        //[NotMapped]
+        //public IEnumerable<BikeHistory> History { get; set; } 
     }
 
     public class BikeHistory

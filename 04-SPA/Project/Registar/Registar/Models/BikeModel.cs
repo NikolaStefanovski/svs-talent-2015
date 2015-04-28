@@ -10,6 +10,8 @@ namespace Registar.Models
     /// </summary>
     public class BikeModel
     {
+		public int BikeId { get; set; }
+
         public string RegNumber { get; set; }
 
         public string Producer { get; set; }
