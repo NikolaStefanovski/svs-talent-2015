@@ -7,45 +7,21 @@ using Registar.BusinessLayer.Contracts;
 using Registar.DataLayer;
 using Registar.DomainModel;
 using System.Data.Entity;
+using Registar.Repository.Interfaces;
+using Registar.Common;
 
 namespace Registar.BusinessLayer.Handlers
 {
     internal class BikeSearchCommandHandler : CommandHandlerBase<BikeSearchCommand, BikeSearchResult>
     {
-       
-
         protected override BikeSearchResult ExecuteCommand(BikeSearchCommand command)
         {
-            using (this.Context = new RegistarDbContext())
-            {
-                //IEnumerable<Bike> bikes = new List<Bike>();
-                //bikes = context.Bikes
-                //        .OrderBy(p => p.BikeId)
-                //        .Take(10);
-                //.ToList();
+            IBikeRepository bikeRepo = RepositoryManager.CreateRepository<IBikeRepository>();
 
-                var query = from b in Context.Bikes
-                            select b;
-
-                if (!string.IsNullOrEmpty(command.Colour))
-                {
-                    query = query.Where(x => x.Colour == command.Colour);
-                }
-                if (!string.IsNullOrEmpty(command.Producer))
-                {
-                    query = query.Where(x => x.Producer == command.Producer);
-                }
-
-                query = query
-                        .OrderBy(x => x.BikeId)
-                        .Skip(command.PageIndex * command.PageSize)
-                        .Take(command.PageSize);
-                //
-
-                BikeSearchResult result = new BikeSearchResult();
-                result.Result = query.ToList();
-                return result;
-            }
+            BikeSearchResult result = new BikeSearchResult();
+            result.Result = bikeRepo.SearchBikes() as List<Bike>;
+     
+            return result;
 
         }
     }

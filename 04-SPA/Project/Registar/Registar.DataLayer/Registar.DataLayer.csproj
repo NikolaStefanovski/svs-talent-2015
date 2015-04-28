@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractDbContext.cs" />
     <Compile Include="BikeConfiguration.cs" />
     <Compile Include="DataContextFactory.cs" />
     <Compile Include="Interfaces\IRegistarContext.cs" />

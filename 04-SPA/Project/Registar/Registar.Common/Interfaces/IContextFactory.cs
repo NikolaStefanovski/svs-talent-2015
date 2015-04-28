@@ -8,6 +8,6 @@ namespace Registar.Common.Interfaces
 {
     public interface IContextFactory
     {
-        TContext CreateContext<TContext>() where TContext : IContext<>;      
+        TContext CreateContext<TContext>() where TContext : IContext;    
     }
 }

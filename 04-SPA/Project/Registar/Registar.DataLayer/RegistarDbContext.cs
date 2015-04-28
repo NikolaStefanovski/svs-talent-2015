@@ -12,12 +12,11 @@ namespace Registar.DataLayer
 {
     public class RegistarDbContext : DbContext, IRegistarContext
     {
-        DbSet<Bike> Bikes;
+        public IDbSet<Bike> Bikes { get; set; }
 
         public RegistarDbContext() : base("RegistarDb")
         {
-            this.Bikes = this.Set<Bike>();
-            
+            this.Bikes = this.Set<Bike>();           
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

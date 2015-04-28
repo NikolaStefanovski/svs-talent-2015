@@ -38,7 +38,6 @@ C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Te
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\obj\Debug\Registar.Tests.csprojResolveAssemblyReference.cache
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\obj\Debug\Registar.Tests.dll
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\obj\Debug\Registar.Tests.pdb
-C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\Microsoft.Web.Mvc.FixedDisplayModes.dll
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\Registar.dll
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Web.Mvc.dll
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\Registar.BusinessLayer.dll
@@ -67,3 +66,13 @@ C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.T
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Web.Http.xml
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\Registar.Repository.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\Registar.Common.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\Registar.Repository.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\Registar.Common.pdb

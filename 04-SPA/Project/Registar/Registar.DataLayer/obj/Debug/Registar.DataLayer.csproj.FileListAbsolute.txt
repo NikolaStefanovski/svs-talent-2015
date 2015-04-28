@@ -22,3 +22,5 @@ C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Da
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\obj\Debug\Registar.DataLayer.csprojResolveAssemblyReference.cache
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\obj\Debug\Registar.DataLayer.dll
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\obj\Debug\Registar.DataLayer.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\bin\Debug\Registar.Common.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.DataLayer\bin\Debug\Registar.Common.pdb

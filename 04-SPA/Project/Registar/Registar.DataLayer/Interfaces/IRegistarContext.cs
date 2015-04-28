@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace Registar.DataLayer.Interfaces
 {
-    public interface IRegistarContext : IContext<Bike>
+    public interface IRegistarContext : IContext
     {
-        
+        IDbSet<Bike> Bikes { get; set; }
     }
 }

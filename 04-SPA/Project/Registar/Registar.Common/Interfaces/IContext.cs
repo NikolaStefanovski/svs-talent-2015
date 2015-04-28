@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Registar.Common.Interfaces
 {
-    public interface IContext<T> : IDbSet<T> 
+    public interface IContext : IDisposable
     {
     }
 }

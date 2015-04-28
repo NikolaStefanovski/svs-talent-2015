@@ -78,3 +78,7 @@ C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\b
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\System.Web.Http.xml
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\System.Web.Http.WebHost.xml
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\obj\Debug\Registar.csproj.App.config
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Common.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Repository.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Common.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Repository.pdb

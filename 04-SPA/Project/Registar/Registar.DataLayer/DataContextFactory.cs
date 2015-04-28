@@ -1,4 +1,5 @@
 ﻿using Registar.Common.Interfaces;
+using Registar.DataLayer.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,12 @@ namespace Registar.DataLayer
 
         public TContext CreateContext<TContext>() where TContext : IContext
         {
-            return null;
+            if (typeof(TContext) == typeof(IRegistarContext))
+            {
+                return (TContext)(object)new RegistarDbContext();
+            }
+
+            return default(TContext);
         }
     }
 }

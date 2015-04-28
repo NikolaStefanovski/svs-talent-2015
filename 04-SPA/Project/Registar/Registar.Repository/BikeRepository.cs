@@ -1,5 +1,6 @@
 ﻿using Registar.Common;
 using Registar.DataLayer;
+using Registar.DataLayer.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,10 @@ namespace Registar.Repository
     {
         public IList<DomainModel.Bike> SearchBikes()
         {
-            //using (var context = DataContextManager.CreateContext<IDbContext>())
-            //{
-            //}
-            return null;
+            using (var context = DataContextManager.CreateContext<IRegistarContext>())
+            {
+                return context.Bikes.ToList();
+            }
         }
     }
 }

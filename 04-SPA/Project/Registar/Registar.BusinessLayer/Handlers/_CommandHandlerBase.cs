@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Registar.BusinessLayer.Contracts;
 using System.Data.Entity;
 using Registar.DataLayer;
+using Registar.Common.Interfaces;
 
 namespace Registar.BusinessLayer.Handlers
 {
@@ -15,12 +16,7 @@ namespace Registar.BusinessLayer.Handlers
     internal abstract class CommandHandlerBase<TRequest,TResult> : IHandler where TRequest:Command
                                                                             where TResult:CommandResult
     {
-        public AbstractDbContext Context { get; set; }
-               
-        public CommandHandlerBase(AbstractDbContext context)
-        {
-            this.Context = context;
-        }
+        public IContext Context { get; set; }
 
         /// <summary>
         /// 
@@ -46,7 +42,7 @@ namespace Registar.BusinessLayer.Handlers
     /// </summary>
     public interface IHandler
     {
-        AbstractDbContext Context { get; set; }
+        IContext Context { get; set; }
 
         CommandResult Execute(Command command);
     }
