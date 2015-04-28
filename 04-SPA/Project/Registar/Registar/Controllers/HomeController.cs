@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Registar.BusinessLayer;
 using Registar.BusinessLayer.Contracts;
 using Registar.Models;
+using Registar.Mappers;
 
 namespace Registar.Controllers
 {
@@ -31,14 +32,10 @@ namespace Registar.Controllers
             List<BikeModel> result = new List<BikeModel>(_result.Result.Capacity);
             BikeModel temp;
 
+            MapperManager.CreateMap<BikeModel, BikeModel>();
             for (int i = 0; i < result.Capacity; ++i)
             {
-                temp = new BikeModel();
-                temp.Model = _result.Result[i].Model;
-                temp.RegNumber = _result.Result[i].RegNumber;
-                temp.Producer = _result.Result[i].Producer;
-                temp.Colour = _result.Result[i].Colour;
-
+                temp = MapperManager.GetModel<BikeModel>(result[i]);
                 result.Add(temp);
             }
 

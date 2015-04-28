@@ -16,10 +16,14 @@ namespace Registar.BusinessLayer.Handlers
     {
         protected override BikeSearchResult ExecuteCommand(BikeSearchCommand command)
         {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("colour", command.Colour);
+            parameters.Add("producer", command.Producer);
+
             IBikeRepository bikeRepo = RepositoryManager.CreateRepository<IBikeRepository>();
 
             BikeSearchResult result = new BikeSearchResult();
-            result.Result = bikeRepo.SearchBikes() as List<Bike>;
+            result.Result = bikeRepo.SearchBikes(parameters) as List<Bike>;
      
             return result;
 

@@ -1,5 +1,6 @@
 ﻿using Registar.Common;
 using Registar.DataLayer;
+using Registar.Mappers;
 using Registar.Repository;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,7 @@ namespace Registar
         {
             RepositoryManager.RegisterFactory(new RepositoryFactory());
             DataContextManager.RegisterFactory(new DataContextFactory());
+            MapperManager.RegisterMapper(new DefaultMapper());
         }
     }
 }

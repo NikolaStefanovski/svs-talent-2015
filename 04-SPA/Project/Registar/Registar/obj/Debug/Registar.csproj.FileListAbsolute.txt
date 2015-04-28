@@ -82,3 +82,12 @@ C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bi
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Repository.dll
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Common.pdb
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Repository.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Autofac.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\log4net.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Autofac.xml
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\log4net.xml
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\AutoMapper.Net4.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\AutoMapper.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\AutoMapper.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\AutoMapper.xml
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\AutoMapper.Net4.pdb

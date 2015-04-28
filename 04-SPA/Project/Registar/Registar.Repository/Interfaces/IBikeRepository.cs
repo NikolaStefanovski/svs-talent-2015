@@ -10,6 +10,6 @@ namespace Registar.Repository.Interfaces
 {
     public interface IBikeRepository : IRepository
     {
-        IList<Bike> SearchBikes();
+        IList<Bike> SearchBikes(IDictionary<string, string> parameters);
     }
 }

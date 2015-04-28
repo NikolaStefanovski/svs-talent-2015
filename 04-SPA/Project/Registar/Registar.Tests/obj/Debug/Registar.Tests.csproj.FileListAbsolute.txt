@@ -76,3 +76,9 @@ C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Te
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Web.Http.WebHost.xml
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\Registar.Repository.pdb
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\Registar.Common.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\log4net.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\log4net.xml
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\AutoMapper.Net4.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\AutoMapper.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\AutoMapper.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\AutoMapper.xml

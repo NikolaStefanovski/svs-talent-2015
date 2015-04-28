@@ -11,10 +11,11 @@ namespace Registar.Repository
 {
     internal class BikeRepository
     {
-        public IList<DomainModel.Bike> SearchBikes()
+        public IList<DomainModel.Bike> SearchBikes(IDictionary<string, string> paramaters)
         {
             using (var context = DataContextManager.CreateContext<IRegistarContext>())
             {
+                //LoggingManager
                 return context.Bikes.ToList();
             }
         }

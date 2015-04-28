@@ -35,3 +35,5 @@ C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.Bu
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\bin\Debug\Registar.Repository.dll
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\bin\Debug\Registar.Common.pdb
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\bin\Debug\Registar.Repository.pdb
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\bin\Debug\log4net.dll
+C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\bin\Debug\log4net.xml
