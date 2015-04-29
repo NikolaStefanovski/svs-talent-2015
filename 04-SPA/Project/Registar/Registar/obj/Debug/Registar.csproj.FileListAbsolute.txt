@@ -77,7 +77,6 @@ C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\b
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\System.Net.Http.Primitives.xml
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\System.Web.Http.xml
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\System.Web.Http.WebHost.xml
-C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\obj\Debug\Registar.csproj.App.config
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Common.dll
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Repository.dll
 C:\Users\PC\Documents\GitHub\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Common.pdb
@@ -142,3 +141,16 @@ C:\Users\code.SEDC\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar
 C:\Users\code.SEDC\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\obj\Debug\Registar.dll
 C:\Users\code.SEDC\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\obj\Debug\Registar.pdb
 C:\Users\code.SEDC\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\obj\Debug\Registar.csproj.App.config
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Autofac.dll
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\AutoMapper.dll
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\AutoMapper.Net4.dll
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\log4net.dll
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Common.dll
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Repository.dll
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Common.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Registar.Repository.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\Autofac.xml
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\AutoMapper.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\AutoMapper.xml
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\AutoMapper.Net4.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar\bin\log4net.xml

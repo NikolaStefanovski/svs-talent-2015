@@ -57,3 +57,9 @@ C:\Users\code.SEDC\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar
 C:\Users\code.SEDC\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\obj\Debug\Registar.BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\code.SEDC\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\obj\Debug\Registar.BusinessLayer.dll
 C:\Users\code.SEDC\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\obj\Debug\Registar.BusinessLayer.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\bin\Debug\Registar.Common.dll
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\bin\Debug\Registar.Repository.dll
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\bin\Debug\log4net.dll
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\bin\Debug\Registar.Common.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\bin\Debug\Registar.Repository.pdb
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.BusinessLayer\bin\Debug\log4net.xml
