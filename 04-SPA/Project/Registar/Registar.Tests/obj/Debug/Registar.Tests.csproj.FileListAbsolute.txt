@@ -137,3 +137,8 @@ C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.T
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\AutoMapper.pdb
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\AutoMapper.xml
 C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\log4net.xml
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\student\Source\Repos\svs-talent-2015\04-SPA\Project\Registar\Registar.Tests\obj\Debug\Registar.Tests.csproj.App.config
